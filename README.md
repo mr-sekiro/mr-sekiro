@@ -92,17 +92,31 @@
 ## 📊 GitHub Analytics  
 
 <p align="center">
-  <!-- GitHub Stats -->
-  <img src="https://github-readme-stats.vercel.app/api?username=mr-sekiro&show_icons=true&theme=tokyonight&count_private=true&include_all_commits=true" height="170" alt="GitHub Stats"/>
+  <!-- GitHub Stats (Radical Theme, Borderless) -->
+  <img src="https://github-readme-stats-snowy-two-18.vercel.app/api?username=mr-sekiro&show_icons=true&theme=radical&hide_border=true&include_all_commits=true&count_private=true" height="170" alt="GitHub Stats"/>
   
-<p align="center">
-  <!-- Top Languages -->
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mr-sekiro&layout=compact&theme=tokyonight&count_private=true&langs_count=8" height="170" alt="Top Languages"/>
+  <!-- Alternative: Gruvbox Theme -->
+  <!--
+  <img src="https://github-readme-stats-snowy-two-18.vercel.app/api?username=mr-sekiro&show_icons=true&theme=gruvbox&hide_border=true&card_width=320&include_all_commits=true&count_private=true" height="170" alt="GitHub Stats"/>
+  -->
 </p>
 
 <p align="center">
-  <!-- Contribution Graph -->
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=mr-sekiro&theme=tokyo-night&bg_color=1a1b27&color=70a5fd&line=38bdae&point=ffffff&hide_border=true" alt="Contribution Graph"/>
+  <!-- Top Languages (Pie Layout) -->
+  <img src="https://github-readme-stats-snowy-two-18.vercel.app/api/top-langs/?username=mr-sekiro&layout=pie&theme=tokyonight&hide_border=true&count_private=true&langs_count=8" height="170" alt="Top Languages"/>
+  
+  <!-- Alternative: Compact List -->
+  <img src="https://github-readme-stats-snowy-two-18.vercel.app/api/top-langs/?username=mr-sekiro&layout=compact&theme=radical&hide_border=true&count_private=true&langs_count=8" height="170" alt="Top Languages"/>
+</p>
+
+<p align="center">
+  <!-- Contribution Graph (Dracula Theme) -->
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=mr-sekiro&theme=dracula&bg_color=1a1b27&hide_border=true" alt="Contribution Graph"/>
+  
+  <!-- Alternative: High Contrast -->
+  <!--
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=mr-sekiro&theme=high-contrast&hide_border=true" alt="Contribution Graph"/>
+  -->
 </p>
 
 ---
