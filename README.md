@@ -71,18 +71,22 @@
 
 ## 📂 Featured Projects  
 
-- 🏢 **[Company Management System](https://github.com/mr-sekiro/CompanyManagementSystem)**  
+- 🏢 **[Company Management System](https://github.com/mr-sekiro/CMS-MVC)**  
   Multi-layered system for managing departments, employees, and operations with role-based security.  
   **Tech:** ASP.NET MVC · EF Core · SQL Server  
 
 - 🛒 **[E-Commerce Platform](https://github.com/mr-sekiro/ECommercePlatform)**  
   Backend for an online store with product management, cart, orders, and secure JWT authentication.  
-  **Tech:** ASP.NET Core Web API · SQL Server  
+  **Tech:** ASP.NET Core Web API · SQL Server
 
+- 🏥 **[Healthcare Management System](https://github.com/mr-sekiro/WE-CARE)**  
+  Appointment scheduling, nurse shift management, and secure chat between patients and staff.  
+  **Tech:** Node.js . Express.js, MongoDB with Mongoose . JSON Web Tokens (JWT) . Cloudinary (for image uploads) . Stripe 
+<!--
 - 🏥 **[Healthcare Management System](https://github.com/mr-sekiro/HealthcareManagementSystem)**  
   Appointment scheduling, nurse shift management, and secure chat between patients and staff.  
   **Tech:** ASP.NET Core Web API · SQL Server  
-
+-->
 - 🖥️ **[Driving License Desktop App](https://github.com/mr-sekiro/DrivingLicenseApp)**  
   End-to-end desktop solution for license issuance, renewal, suspension, tests, and fees.  
   **Tech:** WPF · WinForms · SQL Server  
