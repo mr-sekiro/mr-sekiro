@@ -97,7 +97,9 @@
 
 <p align="center">
   <!-- GitHub Stats (Radical Theme, Borderless) -->
-  <img src="https://github-readme-stats-snowy-two-18.vercel.app/api?username=mr-sekiro&show_icons=true&theme=radical&hide_border=true&include_all_commits=true&count_private=true" height="170" alt="GitHub Stats"/>
+ <img src="https://github-readme-stats-snowy-two-18.vercel.app/api?username=mr-sekiro&show_icons=true&theme=radical&hide_border=true&include_all_commits=true&count_private=true" height="170" alt="GitHub Stats"/>
+  &nbsp;
+  <img src="https://streak-stats.demolab.com?user=mr-sekiro&theme=radical&hide_border=true" height="170" alt="GitHub Streak"/>
   
   <!-- Alternative: Gruvbox Theme -->
   <!--
