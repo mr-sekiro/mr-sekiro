@@ -63,6 +63,10 @@
   * full-featured e-commerce API for an online store with product management, cart, orders, and secure JWT authentication.
   * **Tech:** ASP.NET Core Web API · SQL Server
 
+- 🏢 **[Company Management System](https://github.com/mr-sekiro/CMS)**  
+  * Multi-layered system for managing company departments, employees, and daily operations.  
+  * **Tech:** ASP.NET MVC · EF Core · SQL Server
+
 - 🖥️ **[Driving License Desktop App](https://github.com/mr-sekiro/DVLD)**
   * End-to-end desktop solution for managing the entire driving license lifecycle.
   * **Tech:** WPF · WinForms · SQL Server
