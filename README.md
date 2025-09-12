@@ -1,35 +1,23 @@
-<h1 align="center">Abdullah Hussein</h1>
-<h3 align="center">.NET Backend & Desktop Developer</h3>
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?size=32&duration=4000&color=0072FF&center=true&vCenter=true&width=600&lines=Abdullah+Hussein&repeat=false" alt="Abdullah Hussein" />
+</p>
 
 <p align="center">
-  Passionate about building <b>scalable APIs</b>, <b>robust systems</b>, and <b>desktop applications</b> with performance & clean architecture in mind.  
+  <img src="https://readme-typing-svg.herokuapp.com?size=24&duration=4000&pause=500&color=512BD4&center=true&vCenter=true&width=600&lines=.NET+Developer&repeat=false" alt=".NET Developer" />
+</p>
+
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?size=20&duration=4000&pause=1200&color=FFFFFF&center=true&vCenter=true&width=900&lines=Designing+scalable+backend+systems+with+.NET+Core;Building+robust+desktop+apps+using+WPF+%26+WinForms;Expertise+in+EF+Core%2C+ADO.NET%2C+SQL+Server+%26+LINQ;Implementing+secure+auth+with+JWT+%26+multi-layered+architecture;Advocate+of+clean+code%2C+SOLID+%26+design+patterns;Exploring+cloud+tech+(AWS%2C+Docker)+%26+microservices;Delivering+impactful%2C+production-ready+software;Lifelong+learner+adapting+to+modern+technologies&repeat=true" alt="About Me" />
 </p>
 
 ---
-
-## 🚀 About Me  
-
-- I design and build **scalable backend systems** with **.NET Core, C#, and RESTful APIs**.  
-- Experienced in creating **desktop applications** using **WPF** and **WinForms**, focusing on performance and usability.  
-- Strong background in **Entity Framework Core, ADO.NET, SQL Server, LINQ**, and query optimization.  
-- Skilled in implementing **secure authentication & authorization** with **JWT** and **multi-layered architecture**.  
-- Advocate of **clean code principles**, **SOLID design**, and **software craftsmanship**.  
-- Skilled in **design patterns** (Repository, Unit of Work, DI, Factory, Singleton, Observer) for scalable and maintainable systems.  
-- Exploring **cloud technologies (AWS, Docker)** and **modern backend architectures** like **microservices**.  
-- Driven by solving **real-world problems** and delivering **impactful, production-ready software**.  
-- Lifelong learner who continuously adapts to new technologies and development practices.  
-
----
-
-## 🛠️ Tech Stack  
-
-### 👨‍💻 Programming & Scripting  
+**🛠️ Tech Stack**
+<br>  <br />
 <p align="left">
   <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white"/>
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
 </p>
 
-### ⚙️ Backend & Frameworks  
 <p align="left">
   <img src="https://img.shields.io/badge/ASP.NET_Core-512BD4?style=for-the-badge&logo=dotnet&logoColor=white"/>
   <img src="https://img.shields.io/badge/Entity_Framework_Core-512BD4?style=for-the-badge&logo=dotnet&logoColor=white"/>
@@ -38,26 +26,22 @@
   <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white"/>
 </p>
 
-### 🖥️ Desktop Development  
 <p align="left">
   <img src="https://img.shields.io/badge/WPF-68217A?style=for-the-badge&logo=windows&logoColor=white"/>
   <img src="https://img.shields.io/badge/WinForms-007ACC?style=for-the-badge&logo=windows&logoColor=white"/>
 </p>
 
-### 🎨 Frontend  
 <p align="left">
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
   <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white"/>
 </p>
 
-### 🗄️ Databases  
 <p align="left">
   <img src="https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white"/>
   <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white"/>
 </p>
 
-### 🔧 Tools & Platforms  
 <p align="left">
   <img src="https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=black"/>
   <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white"/>
@@ -69,68 +53,45 @@
 
 ---
 
-## 📂 Featured Projects  
+**📂 Featured Projects**
 
-- 🏥 **[Healthcare Management System](https://github.com/mr-sekiro/WE-CARE)**  
-  Appointment scheduling, nurse shift management, and secure chat between patients and staff.  
-  **Tech:** Node.js . Express.js, MongoDB with Mongoose . JSON Web Tokens (JWT) . Cloudinary (for image uploads) . Stripe 
-<!--
-- 🏥 **[Healthcare Management System](https://github.com/mr-sekiro/HealthcareManagementSystem)**  
-  Appointment scheduling, nurse shift management, and secure chat between patients and staff.  
-  **Tech:** ASP.NET Core Web API · SQL Server  
--->
+- 🏥 **[Healthcare Management System](https://github.com/mr-sekiro/WE-CARE)**
+  * Appointment scheduling, nurse shift management, and secure chat between patients and staff.
+  * **Tech:** Node.js . Express.js, MongoDB with Mongoose . JSON Web Tokens (JWT) . Cloudinary (for image uploads) . Stripe
 
-- 🛒 **[E-Commerce Platform](https://github.com/mr-sekiro/ECommerce)**  
-  full-featured e-commerce API for an online store with product management, cart, orders, and secure JWT authentication. 
-  **Tech:** ASP.NET Core Web API · SQL Server
-  
-- 🏢 **[Company Management System](https://github.com/mr-sekiro/CMS)**  
-  Multi-layered system for managing company departments, employees, and daily operations.  
-  **Tech:** ASP.NET MVC · EF Core · SQL Server
-   
-- 🖥️ **[Driving License Desktop App](https://github.com/mr-sekiro/DVLD)**  
-  End-to-end desktop solution for managing the entire driving license lifecycle.  
-  **Tech:** WPF · WinForms · SQL Server  
+- 🛒 **[E-Commerce Platform](https://github.com/mr-sekiro/ECommerce)**
+  * full-featured e-commerce API for an online store with product management, cart, orders, and secure JWT authentication.
+  * **Tech:** ASP.NET Core Web API · SQL Server
+
+- 🖥️ **[Driving License Desktop App](https://github.com/mr-sekiro/DVLD)**
+  * End-to-end desktop solution for managing the entire driving license lifecycle.
+  * **Tech:** WPF · WinForms · SQL Server
 
 ---
 
-## 📊 GitHub Analytics  
+**📊 GitHub Analytics**
 
 <p align="center">
-  <!-- GitHub Stats (Radical Theme, Borderless) -->
-  <!--
- <img src="https://github-readme-stats-snowy-two-18.vercel.app/api?username=mr-sekiro&show_icons=true&theme=radical&hide_border=true&include_all_commits=true&count_private=true" height="170" alt="GitHub Stats"/>
+  <img src="https://github-readme-stats-snowy-two-18.vercel.app/api?username=mr-sekiro&show_icons=true&theme=radical&hide_border=true&include_all_commits=true&count_private=true" height="170" alt="GitHub Stats"/>
   &nbsp;
   <img src="https://streak-stats.demolab.com?user=mr-sekiro&theme=radical&hide_border=true" height="170" alt="GitHub Streak"/>
-  -->
-  <!-- Alternative: Gruvbox Theme -->
-  <!--
-  <img src="https://github-readme-stats-snowy-two-18.vercel.app/api?username=mr-sekiro&show_icons=true&theme=gruvbox&hide_border=true&card_width=320&include_all_commits=true&count_private=true" height="170" alt="GitHub Stats"/>
-  -->
-</p>
+ 
+  </p>
 
 <p align="center">
-  <!-- Top Languages (Pie Layout) -->
   <img src="https://github-readme-stats-snowy-two-18.vercel.app/api/top-langs/?username=mr-sekiro&layout=pie&theme=tokyonight&hide_border=true&count_private=true&langs_count=8" height="170" alt="Top Languages"/>
-  
-  <!-- Alternative: Compact List -->
+ 
   <img src="https://github-readme-stats-snowy-two-18.vercel.app/api/top-langs/?username=mr-sekiro&layout=compact&theme=radical&hide_border=true&count_private=true&langs_count=8" height="170" alt="Top Languages"/>
 </p>
 
 <p align="center">
-  <!-- Contribution Graph (Dracula Theme) -->
-  <!--
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=mr-sekiro&theme=dracula&bg_color=1a1b27&hide_border=true" alt="Contribution Graph"/>
-  -->
-  <!-- Alternative: High Contrast -->
-  <!--
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=mr-sekiro&theme=high-contrast&hide_border=true" alt="Contribution Graph"/>
-  -->
-</p>
+ 
+  </p>
 
 ---
 
-## 📫 Connect With Me  
+**📫 Connect With Me**
 
 <p align="center">
   <a href="mailto:abdelallamihamed@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
@@ -140,4 +101,3 @@
 ---
 
 <p align="center">⭐ Thanks for visiting! Feel free to explore my repositories, collaborate, or reach out if you’d like to work together.</p>
-
