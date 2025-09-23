@@ -66,11 +66,11 @@
 - 🏢 **[Company Management System](https://github.com/mr-sekiro/CMS)**  
   * Multi-layered system for managing Software company Teams, Developers, Projects and daily operations.  
   * **Tech:** ASP.NET MVC · EF Core · SQL Server
-
+<!--
 - 🖥️ **[Driving License Desktop App](https://github.com/mr-sekiro/DVLD)**
   * End-to-end desktop solution for managing the entire driving license lifecycle.
   * **Tech:** WPF · WinForms · SQL Server
-
+-->
 ---
 
 **📊 GitHub Analytics**
