@@ -76,22 +76,19 @@
 **📊 GitHub Analytics**
 
 <p align="center">
-  <img src="https://github-readme-stats-snowy-two-18.vercel.app/api?username=mr-sekiro&show_icons=true&theme=radical&hide_border=true&include_all_commits=true&count_private=true" height="170" alt="GitHub Stats"/>
+  <img src="https://github-readme-stats-snowy-two-18.vercel.app/api?username=mr-sekiro&show_icons=true&theme=radical&hide_border=true&include_all_commits=true&count_private=true" height="150" alt="GitHub Stats"/>
   &nbsp;
-  <img src="https://streak-stats.demolab.com?user=mr-sekiro&theme=radical&hide_border=true" height="170" alt="GitHub Streak"/>
- 
-  </p>
+  <img src="https://streak-stats.demolab.com?user=mr-sekiro&theme=radical&hide_border=true" height="150" alt="GitHub Streak"/>
+</p>
 
 <p align="center">
   <img src="https://github-readme-stats-snowy-two-18.vercel.app/api/top-langs/?username=mr-sekiro&layout=pie&theme=tokyonight&hide_border=true&count_private=true&langs_count=8" height="170" alt="Top Languages"/>
- 
   <img src="https://github-readme-stats-snowy-two-18.vercel.app/api/top-langs/?username=mr-sekiro&layout=compact&theme=radical&hide_border=true&count_private=true&langs_count=8" height="170" alt="Top Languages"/>
 </p>
 
 <p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=mr-sekiro&theme=dracula&bg_color=1a1b27&hide_border=true" alt="Contribution Graph"/>
- 
-  </p>
+</p>
 
 ---
 
