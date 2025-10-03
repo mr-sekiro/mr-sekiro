@@ -1,3 +1,5 @@
+![ASP.NET Core](https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/refs/heads/main/assets/.net.png)
+
 <p align="center">
   <img src="https://readme-typing-svg.herokuapp.com?size=32&duration=4000&color=0072FF&center=true&vCenter=true&width=600&lines=Abdullah+Hussein&repeat=false" alt="Abdullah Hussein" />
 </p>
@@ -85,10 +87,11 @@
   <img src="https://github-readme-stats-snowy-two-18.vercel.app/api/top-langs/?username=mr-sekiro&layout=pie&theme=tokyonight&hide_border=true&count_private=true&langs_count=8" height="170" alt="Top Languages"/>
   <img src="https://github-readme-stats-snowy-two-18.vercel.app/api/top-langs/?username=mr-sekiro&layout=compact&theme=radical&hide_border=true&count_private=true&langs_count=8" height="170" alt="Top Languages"/>
 </p>
-
+<!--
 <p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=mr-sekiro&theme=dracula&bg_color=1a1b27&hide_border=true" alt="Contribution Graph"/>
 </p>
+-->
 
 ---
 
