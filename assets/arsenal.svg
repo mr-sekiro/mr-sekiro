@@ -1,0 +1,117 @@
+<svg width="900" height="330" viewBox="0 0 900 330" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="panelGrad" x1="0" y1="0" x2="900" y2="330" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="0.5" stop-color="#11161f"/>
+      <stop offset="1" stop-color="#0d1117"/>
+    </linearGradient>
+    <linearGradient id="barGrad" x1="305" y1="0" x2="860" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e63946"/>
+      <stop offset="1" stop-color="#e0a458"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0" y1="0" x2="900" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e63946" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#e63946"/>
+      <stop offset="1" stop-color="#e0a458" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="panelDots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.5" fill="#8b949e" fill-opacity="0.07"/>
+    </pattern>
+    <clipPath id="panelFrame">
+      <rect width="900" height="330" rx="14"/>
+    </clipPath>
+  </defs>
+
+  <style>
+    .bar {
+      transform-box: fill-box;
+      transform-origin: left center;
+      animation: growBar 1.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+    @keyframes growBar {
+      from { transform: scaleX(0); }
+      to { transform: scaleX(1); }
+    }
+    .tip {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: tipIn 0.5s ease-out both, tipPulse 3s ease-in-out infinite;
+    }
+    @keyframes tipIn {
+      from { transform: scale(0); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    @keyframes tipPulse {
+      0%, 100% { opacity: 0.85; }
+      50% { opacity: 1; }
+    }
+    .lbl { animation: lblIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) both; }
+    @keyframes lblIn {
+      from { transform: translateX(-10px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    .r1 { animation-delay: 0.15s; }
+    .r2 { animation-delay: 0.35s; }
+    .r3 { animation-delay: 0.55s; }
+    .r4 { animation-delay: 0.75s; }
+    .r5 { animation-delay: 0.95s; }
+    .r6 { animation-delay: 1.15s; }
+    .t1 { animation-delay: 1.35s, 1.35s; }
+    .t2 { animation-delay: 1.55s, 1.55s; }
+    .t3 { animation-delay: 1.75s, 1.75s; }
+    .t4 { animation-delay: 1.95s, 1.95s; }
+    .t5 { animation-delay: 2.15s, 2.15s; }
+    .t6 { animation-delay: 2.35s, 2.35s; }
+  </style>
+
+  <g clip-path="url(#panelFrame)">
+    <rect width="900" height="330" fill="url(#panelGrad)"/>
+    <rect width="900" height="330" fill="url(#panelDots)"/>
+    <text x="893" y="300" text-anchor="end" font-family="'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif" font-size="180" font-weight="700" fill="#e63946" opacity="0.05">武</text>
+    <rect x="0" y="0" width="900" height="2.5" fill="url(#accentGrad)"/>
+
+    <g class="lbl r1">
+      <text x="285" y="52" text-anchor="end" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" letter-spacing="1" fill="#c9d1d9">C# · ASP.NET CORE</text>
+    </g>
+    <rect x="305" y="41" width="555" height="8" rx="4" fill="#21262d"/>
+    <rect class="bar r1" x="305" y="41" width="527" height="8" rx="4" fill="url(#barGrad)"/>
+    <rect class="tip t1" x="826" y="39" width="12" height="12" fill="none" stroke="#e0a458" stroke-width="2" transform="rotate(45 832 45)"/>
+
+    <g class="lbl r2">
+      <text x="285" y="98" text-anchor="end" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" letter-spacing="1" fill="#c9d1d9">SQL SERVER · EF CORE</text>
+    </g>
+    <rect x="305" y="87" width="555" height="8" rx="4" fill="#21262d"/>
+    <rect class="bar r2" x="305" y="87" width="500" height="8" rx="4" fill="url(#barGrad)"/>
+    <rect class="tip t2" x="799" y="85" width="12" height="12" fill="none" stroke="#e0a458" stroke-width="2" transform="rotate(45 805 91)"/>
+
+    <g class="lbl r3">
+      <text x="285" y="144" text-anchor="end" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" letter-spacing="1" fill="#c9d1d9">REACT · NEXT.JS · TYPESCRIPT</text>
+    </g>
+    <rect x="305" y="133" width="555" height="8" rx="4" fill="#21262d"/>
+    <rect class="bar r3" x="305" y="133" width="444" height="8" rx="4" fill="url(#barGrad)"/>
+    <rect class="tip t3" x="743" y="131" width="12" height="12" fill="none" stroke="#e0a458" stroke-width="2" transform="rotate(45 749 137)"/>
+
+    <g class="lbl r4">
+      <text x="285" y="190" text-anchor="end" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" letter-spacing="1" fill="#c9d1d9">NODE.JS · EXPRESS</text>
+    </g>
+    <rect x="305" y="179" width="555" height="8" rx="4" fill="#21262d"/>
+    <rect class="bar r4" x="305" y="179" width="400" height="8" rx="4" fill="url(#barGrad)"/>
+    <rect class="tip t4" x="699" y="177" width="12" height="12" fill="none" stroke="#e0a458" stroke-width="2" transform="rotate(45 705 183)"/>
+
+    <g class="lbl r5">
+      <text x="285" y="236" text-anchor="end" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" letter-spacing="1" fill="#c9d1d9">DOCKER · CI/CD · OBSERVABILITY</text>
+    </g>
+    <rect x="305" y="225" width="555" height="8" rx="4" fill="#21262d"/>
+    <rect class="bar r5" x="305" y="225" width="377" height="8" rx="4" fill="url(#barGrad)"/>
+    <rect class="tip t5" x="676" y="223" width="12" height="12" fill="none" stroke="#e0a458" stroke-width="2" transform="rotate(45 682 229)"/>
+
+    <g class="lbl r6">
+      <text x="285" y="282" text-anchor="end" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" letter-spacing="1" fill="#c9d1d9">WPF · WINFORMS</text>
+    </g>
+    <rect x="305" y="271" width="555" height="8" rx="4" fill="#21262d"/>
+    <rect class="bar r6" x="305" y="271" width="361" height="8" rx="4" fill="url(#barGrad)"/>
+    <rect class="tip t6" x="660" y="269" width="12" height="12" fill="none" stroke="#e0a458" stroke-width="2" transform="rotate(45 666 275)"/>
+  </g>
+
+  <rect x="0.5" y="0.5" width="899" height="329" rx="14" stroke="#21262d"/>
+</svg>

@@ -138,11 +138,11 @@
     <rect class="underline" x="380" y="166" width="240" height="3" rx="1.5" fill="url(#underlineGrad)"/>
 
     <g class="fadeUp d2">
-      <text x="500" y="212" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="21" font-weight="600" letter-spacing="9" fill="#e0a458">.NET BACKEND DEVELOPER</text>
+      <text x="500" y="212" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="21" font-weight="600" letter-spacing="9" fill="#e0a458">FULL-STACK .NET DEVELOPER</text>
     </g>
 
     <g class="fadeUp d3">
-      <text x="500" y="256" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="500" letter-spacing="2.5" fill="#8b949e">C#  ·  ASP.NET CORE  ·  EF CORE  ·  SQL SERVER  ·  CLEAN ARCHITECTURE</text>
+      <text x="500" y="256" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="500" letter-spacing="2.5" fill="#8b949e">C#  ·  ASP.NET CORE  ·  REACT  ·  NEXT.JS  ·  SQL SERVER  ·  CLEAN ARCHITECTURE</text>
     </g>
 
     <rect x="0" y="0" width="1000" height="3" fill="url(#topAccent)"/>
