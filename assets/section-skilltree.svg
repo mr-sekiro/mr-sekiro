@@ -19,12 +19,12 @@
   </style>
   <g class="title">
     <rect class="gem" x="8" y="24" width="14" height="14" fill="none" stroke="#e63946" stroke-width="2.5" transform="rotate(45 15 31)"/>
-    <text x="44" y="41" font-family="'Palatino Linotype', 'Book Antiqua', Georgia, serif" font-size="29" font-weight="700" letter-spacing="6" fill="url(#titleGrad)">CONTRIBUTIONS</text>
+    <text x="44" y="41" font-family="'Palatino Linotype', 'Book Antiqua', Georgia, serif" font-size="29" font-weight="700" letter-spacing="6" fill="url(#titleGrad)">SKILL TREE</text>
   </g>
   <g class="sub">
-    <text x="46" y="62" font-family="'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif" font-size="12" letter-spacing="4" fill="#8b949e">貢献</text>
+    <text x="46" y="62" font-family="'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif" font-size="12" letter-spacing="4" fill="#8b949e">スキルツリー</text>
   </g>
-  <text x="893" y="56" text-anchor="end" font-family="'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif" font-size="48" font-weight="700" fill="#e63946" opacity="0.25">道</text>
+  <text x="893" y="56" text-anchor="end" font-family="'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif" font-size="48" font-weight="700" fill="#e63946" opacity="0.25">技</text>
   <path class="rule" d="M8 78 C 240 72, 480 83, 892 76" stroke="url(#ruleGrad)" stroke-width="3" stroke-linecap="round" fill="none"/>
   <path class="rule2" d="M8 82 C 300 78, 560 86, 892 80" stroke="url(#ruleGrad)" stroke-width="1" stroke-linecap="round" fill="none" opacity="0.45"/>
 </svg>

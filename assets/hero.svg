@@ -1,158 +1,178 @@
-<svg width="1000" height="300" viewBox="0 0 1000 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="1000" height="360" viewBox="0 0 1000 360" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bgGrad" x1="0" y1="0" x2="1000" y2="300" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#0d1117"/>
-      <stop offset="0.5" stop-color="#131a24"/>
-      <stop offset="1" stop-color="#0d1117"/>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#05070d"/>
+      <stop offset="0.55" stop-color="#0c1019"/>
+      <stop offset="0.85" stop-color="#131019"/>
+      <stop offset="1" stop-color="#05070d"/>
     </linearGradient>
-    <radialGradient id="sunGrad" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#e63946" stop-opacity="0.35"/>
-      <stop offset="0.6" stop-color="#e63946" stop-opacity="0.12"/>
-      <stop offset="1" stop-color="#e63946" stop-opacity="0"/>
+    <radialGradient id="moonGrad" cx="0.4" cy="0.4" r="0.7">
+      <stop offset="0" stop-color="#f5ecd8"/>
+      <stop offset="1" stop-color="#dcc9a4"/>
     </radialGradient>
-    <linearGradient id="nameGrad" x1="150" y1="0" x2="850" y2="0" gradientUnits="userSpaceOnUse">
+    <radialGradient id="moonHalo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#e8d9b4" stop-opacity="0.35"/>
+      <stop offset="0.6" stop-color="#e8d9b4" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#e8d9b4" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="nameGrad" x1="160" y1="0" x2="840" y2="0" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#e63946"/>
-      <stop offset="0.5" stop-color="#f1f5f9"/>
+      <stop offset="0.5" stop-color="#f5f0e6"/>
       <stop offset="1" stop-color="#e0a458"/>
     </linearGradient>
     <linearGradient id="shineGrad" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
-      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.45"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.4"/>
       <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="underlineGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#e63946" stop-opacity="0"/>
-      <stop offset="0.2" stop-color="#e63946"/>
-      <stop offset="0.8" stop-color="#e0a458"/>
-      <stop offset="1" stop-color="#e0a458" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="sweepGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
-      <stop offset="0.5" stop-color="#e63946" stop-opacity="0.5"/>
-      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="topAccent" x1="0" y1="0" x2="1000" y2="0" gradientUnits="userSpaceOnUse">
+    <linearGradient id="accentLine" x1="0" y1="0" x2="1000" y2="0" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#e63946" stop-opacity="0"/>
       <stop offset="0.5" stop-color="#e63946"/>
       <stop offset="1" stop-color="#e0a458" stop-opacity="0"/>
     </linearGradient>
-    <pattern id="dotGrid" width="26" height="26" patternUnits="userSpaceOnUse">
-      <circle cx="1.5" cy="1.5" r="1.5" fill="#8b949e" fill-opacity="0.08"/>
-    </pattern>
+    <linearGradient id="groundFade" x1="0" y1="270" x2="0" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#05070d" stop-opacity="0"/>
+      <stop offset="1" stop-color="#05070d" stop-opacity="0.85"/>
+    </linearGradient>
+    <filter id="mistBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
     <clipPath id="frame">
-      <rect width="1000" height="300" rx="16"/>
+      <rect width="1000" height="360" rx="16"/>
     </clipPath>
     <clipPath id="nameClip">
-      <text x="500" y="148" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="58" font-weight="800" letter-spacing="4">ABDULLAH HUSSEIN</text>
+      <text x="500" y="204" text-anchor="middle" font-family="'Palatino Linotype', 'Book Antiqua', Georgia, serif" font-size="58" font-weight="700" letter-spacing="4">ABDULLAH HUSSEIN</text>
     </clipPath>
   </defs>
 
   <style>
-    .pulse {
-      transform-box: fill-box;
-      transform-origin: center;
-      animation: pulse 5s ease-in-out infinite;
+    .dot { animation: twinkle 3.6s ease-in-out infinite; }
+    @keyframes twinkle { 0%,100% { opacity: 0.1; } 50% { opacity: 0.8; } }
+    .halo { transform-box: fill-box; transform-origin: center; animation: halo 7s ease-in-out infinite; }
+    @keyframes halo { 0%,100% { transform: scale(1); opacity: 0.85; } 50% { transform: scale(1.12); opacity: 1; } }
+    .mist1 { animation: drift1 26s ease-in-out infinite alternate; }
+    .mist2 { animation: drift2 34s ease-in-out infinite alternate; }
+    .mist3 { animation: drift1 30s ease-in-out infinite alternate-reverse; }
+    @keyframes drift1 { from { transform: translateX(-50px); } to { transform: translateX(70px); } }
+    @keyframes drift2 { from { transform: translateX(60px); } to { transform: translateX(-60px); } }
+    .enso { animation: ensoDraw 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.3s both; }
+    .enso2 { animation: ensoDraw 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.45s both; }
+    @keyframes ensoDraw { from { stroke-dasharray: 0 100; } to { stroke-dasharray: 91 9; } }
+    .shine { animation: shine 6s ease-in-out 2s infinite; }
+    @keyframes shine { 0% { transform: translateX(-260px); } 40%, 100% { transform: translateX(1060px); } }
+    .fadeUp { animation: fadeUp 1.1s cubic-bezier(0.22, 1, 0.36, 1) both; }
+    .d1 { animation-delay: 0.5s; }
+    .d2 { animation-delay: 0.95s; }
+    .d3 { animation-delay: 1.3s; }
+    @keyframes fadeUp { from { transform: translateY(14px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    .fall  { animation: fall linear infinite; }
+    .sway  { animation: sway ease-in-out infinite alternate; }
+    .spin  { transform-box: fill-box; transform-origin: center; animation: spinP linear infinite; }
+    @keyframes fall  { from { transform: translateY(-40px); } to { transform: translateY(410px); } }
+    @keyframes sway  { from { transform: translateX(-22px); } to { transform: translateX(22px); } }
+    @keyframes spinP { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    .p1 .fall { animation-duration: 11s; animation-delay: -2s; }   .p1 .sway { animation-duration: 3.2s; } .p1 .spin { animation-duration: 6s; }
+    .p2 .fall { animation-duration: 14s; animation-delay: -9s; }   .p2 .sway { animation-duration: 4.1s; } .p2 .spin { animation-duration: 8s; }
+    .p3 .fall { animation-duration: 9.5s; animation-delay: -5s; }  .p3 .sway { animation-duration: 2.8s; } .p3 .spin { animation-duration: 5s; }
+    .p4 .fall { animation-duration: 13s; animation-delay: -1s; }   .p4 .sway { animation-duration: 3.7s; } .p4 .spin { animation-duration: 7s; }
+    .p5 .fall { animation-duration: 10.5s; animation-delay: -7s; } .p5 .sway { animation-duration: 3s; }   .p5 .spin { animation-duration: 5.5s; }
+    .p6 .fall { animation-duration: 12s; animation-delay: -4s; }   .p6 .sway { animation-duration: 4.4s; } .p6 .spin { animation-duration: 9s; }
+    .p7 .fall { animation-duration: 15s; animation-delay: -11s; }  .p7 .sway { animation-duration: 3.5s; } .p7 .spin { animation-duration: 6.5s; }
+    .ember { animation: rise ease-in infinite; }
+    @keyframes rise {
+      0% { transform: translateY(0); opacity: 0; }
+      12% { opacity: 0.9; }
+      80% { opacity: 0.5; }
+      100% { transform: translateY(-190px); opacity: 0; }
     }
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); opacity: 0.9; }
-      50% { transform: scale(1.08); opacity: 1; }
-    }
-    .shine {
-      animation: shine 5s ease-in-out infinite;
-    }
-    @keyframes shine {
-      0% { transform: translateX(-250px); }
-      45%, 100% { transform: translateX(1050px); }
-    }
-    .sweep {
-      animation: sweep 9s ease-in-out infinite;
-      opacity: 0;
-    }
-    @keyframes sweep {
-      0% { transform: translateX(-120px); opacity: 0; }
-      4% { opacity: 1; }
-      22% { transform: translateX(1120px); opacity: 0; }
-      100% { transform: translateX(1120px); opacity: 0; }
-    }
-    .underline {
-      transform-box: fill-box;
-      transform-origin: center;
-      animation: growLine 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.5s both;
-    }
-    @keyframes growLine {
-      from { transform: scaleX(0); }
-      to { transform: scaleX(1); }
-    }
-    .fadeUp { animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) both; }
-    .d1 { animation-delay: 0.15s; }
-    .d2 { animation-delay: 0.55s; }
-    .d3 { animation-delay: 0.95s; }
-    @keyframes fadeUp {
-      from { transform: translateY(16px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-    .dot { animation: twinkle 3.2s ease-in-out infinite; }
-    @keyframes twinkle {
-      0%, 100% { opacity: 0.12; }
-      50% { opacity: 0.85; }
-    }
-    .corner {
-      stroke-dasharray: 60;
-      stroke-dashoffset: 60;
-      animation: drawCorner 1.2s ease-out 1.1s forwards;
-    }
-    @keyframes drawCorner {
-      to { stroke-dashoffset: 0; }
-    }
+    .e1 { animation-duration: 6s; animation-delay: 0s; }
+    .e2 { animation-duration: 7.5s; animation-delay: 2s; }
+    .e3 { animation-duration: 5.5s; animation-delay: 4s; }
+    .e4 { animation-duration: 8s; animation-delay: 1s; }
+    .e5 { animation-duration: 6.8s; animation-delay: 3.2s; }
+    .corner { stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawCorner 1.2s ease-out 1.5s forwards; }
+    @keyframes drawCorner { to { stroke-dashoffset: 0; } }
   </style>
 
   <g clip-path="url(#frame)">
-    <rect width="1000" height="300" fill="url(#bgGrad)"/>
-    <rect width="1000" height="300" fill="url(#dotGrid)"/>
+    <rect width="1000" height="360" fill="url(#skyGrad)"/>
 
-    <circle class="pulse" cx="500" cy="135" r="105" fill="url(#sunGrad)"/>
+    <circle class="dot" cx="120" cy="60" r="1.5" fill="#f1f5f9" style="animation-delay:0s"/>
+    <circle class="dot" cx="240" cy="110" r="1.2" fill="#e0a458" style="animation-delay:1.2s"/>
+    <circle class="dot" cx="330" cy="50" r="1.4" fill="#f1f5f9" style="animation-delay:2.4s"/>
+    <circle class="dot" cx="440" cy="85" r="1.1" fill="#f1f5f9" style="animation-delay:0.7s"/>
+    <circle class="dot" cx="580" cy="55" r="1.4" fill="#e0a458" style="animation-delay:1.8s"/>
+    <circle class="dot" cx="660" cy="120" r="1.2" fill="#f1f5f9" style="animation-delay:3s"/>
+    <circle class="dot" cx="960" cy="180" r="1.3" fill="#f1f5f9" style="animation-delay:0.4s"/>
+    <circle class="dot" cx="60" cy="180" r="1.2" fill="#e63946" style="animation-delay:2s"/>
+    <circle class="dot" cx="905" cy="45" r="1.3" fill="#f1f5f9" style="animation-delay:1.5s"/>
+    <circle class="dot" cx="180" cy="230" r="1.1" fill="#e0a458" style="animation-delay:2.8s"/>
 
-    <text x="985" y="245" text-anchor="end" font-family="'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif" font-size="150" font-weight="700" fill="#e63946" opacity="0.07">隻狼</text>
-    <text x="18" y="245" font-family="'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif" font-size="150" font-weight="700" fill="#e0a458" opacity="0.05">忍</text>
+    <circle class="halo" cx="838" cy="92" r="92" fill="url(#moonHalo)"/>
+    <circle cx="838" cy="92" r="45" fill="url(#moonGrad)" opacity="0.95"/>
+    <circle cx="822" cy="78" r="6" fill="#d4c19a" opacity="0.35"/>
+    <circle cx="852" cy="102" r="9" fill="#d4c19a" opacity="0.28"/>
+    <circle cx="830" cy="108" r="4" fill="#d4c19a" opacity="0.3"/>
 
-    <g class="sweep">
-      <rect x="0" y="-60" width="5" height="420" fill="url(#sweepGrad)" transform="skewX(-16)"/>
+    <path d="M0 302 L120 240 L235 284 L395 228 L560 292 L705 244 L845 288 L1000 236 L1000 360 L0 360 Z" fill="#0a0e16"/>
+
+    <g transform="translate(872,268)" fill="#05080e">
+      <rect x="-2" y="-62" width="4" height="10"/>
+      <path d="M-15 -44 L0 -56 L15 -44 L11 -44 L11 -40 L-11 -40 L-11 -44 Z"/>
+      <rect x="-8" y="-40" width="16" height="8"/>
+      <path d="M-21 -24 L0 -36 L21 -24 L16 -24 L16 -20 L-16 -20 L-16 -24 Z"/>
+      <rect x="-11" y="-20" width="22" height="8"/>
+      <path d="M-27 -4 L0 -16 L27 -4 L21 -4 L21 0 L-21 0 L-21 -4 Z"/>
+      <rect x="-14" y="0" width="28" height="6"/>
     </g>
 
-    <circle class="dot" cx="150" cy="70" r="2" fill="#e63946" style="animation-delay:0s"/>
-    <circle class="dot" cx="260" cy="220" r="1.6" fill="#e0a458" style="animation-delay:0.7s"/>
-    <circle class="dot" cx="820" cy="80" r="2" fill="#e0a458" style="animation-delay:1.3s"/>
-    <circle class="dot" cx="905" cy="180" r="1.6" fill="#e63946" style="animation-delay:2s"/>
-    <circle class="dot" cx="90" cy="160" r="1.4" fill="#f1f5f9" style="animation-delay:2.6s"/>
-    <circle class="dot" cx="700" cy="250" r="1.4" fill="#f1f5f9" style="animation-delay:1.8s"/>
-    <circle class="dot" cx="380" cy="45" r="1.4" fill="#e0a458" style="animation-delay:0.4s"/>
-    <circle class="dot" cx="640" cy="40" r="1.6" fill="#e63946" style="animation-delay:2.9s"/>
+    <path d="M0 332 L150 282 L320 326 L520 272 L720 322 L900 278 L1000 306 L1000 360 L0 360 Z" fill="#060a11"/>
+
+    <g class="mist1" filter="url(#mistBlur)"><ellipse cx="260" cy="296" rx="200" ry="24" fill="#8b949e" opacity="0.07"/></g>
+    <g class="mist2" filter="url(#mistBlur)"><ellipse cx="640" cy="318" rx="240" ry="26" fill="#8b949e" opacity="0.06"/></g>
+    <g class="mist3" filter="url(#mistBlur)"><ellipse cx="860" cy="288" rx="170" ry="20" fill="#8b949e" opacity="0.05"/></g>
+
+    <circle class="enso" cx="500" cy="190" r="128" pathLength="100" stroke="#9c2730" stroke-width="13" stroke-linecap="round" opacity="0.3" transform="rotate(-100 500 190)"/>
+    <circle class="enso2" cx="500" cy="190" r="121" pathLength="100" stroke="#a1272f" stroke-width="5" stroke-linecap="round" opacity="0.18" transform="rotate(-95 500 190)"/>
 
     <g class="fadeUp d1">
       <g clip-path="url(#nameClip)">
-        <rect x="120" y="85" width="760" height="85" fill="url(#nameGrad)"/>
-        <rect class="shine" x="120" y="85" width="140" height="85" fill="url(#shineGrad)" transform="skewX(-20)"/>
+        <rect x="130" y="140" width="740" height="84" fill="url(#nameGrad)"/>
+        <rect class="shine" x="130" y="140" width="150" height="84" fill="url(#shineGrad)" transform="skewX(-20)"/>
       </g>
     </g>
 
-    <rect class="underline" x="380" y="166" width="240" height="3" rx="1.5" fill="url(#underlineGrad)"/>
-
     <g class="fadeUp d2">
-      <text x="500" y="212" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="21" font-weight="600" letter-spacing="9" fill="#e0a458">FULL-STACK .NET DEVELOPER</text>
+      <text x="500" y="252" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="19" font-weight="600" letter-spacing="9" fill="#e0a458">FULL-STACK .NET DEVELOPER</text>
     </g>
 
     <g class="fadeUp d3">
-      <text x="500" y="256" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="500" letter-spacing="2.5" fill="#8b949e">C#  ·  ASP.NET CORE  ·  REACT  ·  NEXT.JS  ·  SQL SERVER  ·  CLEAN ARCHITECTURE</text>
+      <text x="500" y="292" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="500" letter-spacing="2.5" fill="#8b949e">C#  ·  ASP.NET CORE  ·  REACT  ·  NEXT.JS  ·  SQL SERVER  ·  CLEAN ARCHITECTURE</text>
     </g>
 
-    <rect x="0" y="0" width="1000" height="3" fill="url(#topAccent)"/>
-    <rect x="0" y="297" width="1000" height="3" fill="url(#topAccent)"/>
+    <g transform="translate(150,0)"><g class="p1"><g class="fall"><g class="sway"><path class="spin" d="M0 -6 C4 -3 4 3 0 6 C-4 3 -4 -3 0 -6" fill="#dd8f99" opacity="0.7"/></g></g></g></g>
+    <g transform="translate(310,0)"><g class="p2"><g class="fall"><g class="sway"><path class="spin" d="M0 -5 C3.5 -2.5 3.5 2.5 0 5 C-3.5 2.5 -3.5 -2.5 0 -5" fill="#c97f8a" opacity="0.65"/></g></g></g></g>
+    <g transform="translate(60,0)"><g class="p3"><g class="fall"><g class="sway"><path class="spin" d="M0 -4.5 C3 -2 3 2 0 4.5 C-3 2 -3 -2 0 -4.5" fill="#e0a0aa" opacity="0.6"/></g></g></g></g>
+    <g transform="translate(700,0)"><g class="p4"><g class="fall"><g class="sway"><path class="spin" d="M0 -5.5 C4 -3 4 3 0 5.5 C-4 3 -4 -3 0 -5.5" fill="#dd8f99" opacity="0.68"/></g></g></g></g>
+    <g transform="translate(870,0)"><g class="p5"><g class="sway"><g class="fall"><path class="spin" d="M0 -4.5 C3 -2 3 2 0 4.5 C-3 2 -3 -2 0 -4.5" fill="#c97f8a" opacity="0.6"/></g></g></g></g>
+    <g transform="translate(430,0)"><g class="p6"><g class="fall"><g class="sway"><path class="spin" d="M0 -4 C2.8 -2 2.8 2 0 4 C-2.8 2 -2.8 -2 0 -4" fill="#e0a0aa" opacity="0.55"/></g></g></g></g>
+    <g transform="translate(560,0)"><g class="p7"><g class="fall"><g class="sway"><path class="spin" d="M0 -5 C3.5 -2.5 3.5 2.5 0 5 C-3.5 2.5 -3.5 -2.5 0 -5" fill="#dd8f99" opacity="0.62"/></g></g></g></g>
 
-    <path class="corner" d="M 24 52 L 24 24 L 52 24" stroke="#e63946" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-    <path class="corner" d="M 948 24 L 976 24 L 976 52" stroke="#e0a458" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-    <path class="corner" d="M 976 248 L 976 276 L 948 276" stroke="#e63946" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-    <path class="corner" d="M 52 276 L 24 276 L 24 248" stroke="#e0a458" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <g transform="translate(120,345)"><circle class="ember e1" r="2" fill="#e63946"/></g>
+    <g transform="translate(260,350)"><circle class="ember e2" r="1.6" fill="#e0a458"/></g>
+    <g transform="translate(680,348)"><circle class="ember e3" r="2.2" fill="#e63946"/></g>
+    <g transform="translate(800,352)"><circle class="ember e4" r="1.5" fill="#e0a458"/></g>
+    <g transform="translate(480,350)"><circle class="ember e5" r="1.8" fill="#e63946"/></g>
+
+    <rect x="0" y="270" width="1000" height="90" fill="url(#groundFade)"/>
+
+    <rect x="0" y="0" width="1000" height="3" fill="url(#accentLine)"/>
+    <rect x="0" y="357" width="1000" height="3" fill="url(#accentLine)"/>
+    <path class="corner" d="M 24 54 L 24 24 L 54 24" stroke="#e63946" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path class="corner" d="M 946 24 L 976 24 L 976 54" stroke="#e0a458" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path class="corner" d="M 976 306 L 976 336 L 946 336" stroke="#e63946" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path class="corner" d="M 54 336 L 24 336 L 24 306" stroke="#e0a458" stroke-width="2.5" fill="none" stroke-linecap="round"/>
   </g>
 
-  <rect x="0.5" y="0.5" width="999" height="299" rx="16" stroke="#21262d"/>
+  <rect x="0.5" y="0.5" width="999" height="359" rx="16" stroke="#21262d"/>
 </svg>

@@ -1,0 +1,11 @@
+<svg width="84" height="84" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .stamp { transform-box: fill-box; transform-origin: center; animation: stampIn 0.6s cubic-bezier(0.34,1.56,0.64,1) 0.3s both; }
+    @keyframes stampIn { from { transform: scale(1.6) rotate(-10deg); opacity: 0; } to { transform: scale(1) rotate(-4deg); opacity: 1; } }
+  </style>
+  <g class="stamp">
+    <rect x="10" y="10" width="64" height="64" rx="10" fill="#b3242c"/>
+    <rect x="15" y="15" width="54" height="54" rx="7" fill="none" stroke="#f1f5f9" stroke-opacity="0.3" stroke-width="1.5"/>
+    <text x="42" y="59" text-anchor="middle" font-family="'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif" font-size="40" font-weight="700" fill="#f5f0e6">狼</text>
+  </g>
+</svg>
