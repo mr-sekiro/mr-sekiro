@@ -1,0 +1,34 @@
+<svg width="480" height="480" viewBox="0 0 480 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="crRing" x1="0" y1="0" x2="480" y2="480" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e63946"/>
+      <stop offset="1" stop-color="#e0a458"/>
+    </linearGradient>
+    <radialGradient id="crBg" cx="0.5" cy="0.42" r="0.7">
+      <stop offset="0" stop-color="#181f2b"/>
+      <stop offset="1" stop-color="#0b0f16"/>
+    </radialGradient>
+    <radialGradient id="crGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#e63946" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#e63946" stop-opacity="0"/>
+    </radialGradient>
+    <path id="crArc" d="M 240 442 A 202 202 0 0 1 240 38 A 202 202 0 0 1 240 442" fill="none"/>
+  </defs>
+
+  <circle cx="240" cy="240" r="240" fill="url(#crBg)"/>
+  <circle cx="240" cy="240" r="170" fill="url(#crGlow)"/>
+
+  <circle cx="240" cy="240" r="228" stroke="url(#crRing)" stroke-width="5"/>
+  <circle cx="240" cy="240" r="214" stroke="#e0a458" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="240" cy="240" r="150" stroke="#e63946" stroke-width="2" stroke-dasharray="8 12" opacity="0.55"/>
+
+  <circle cx="240" cy="26" r="7" fill="#ff4653"/>
+  <circle cx="240" cy="26" r="3" fill="#ffd9dc" opacity="0.8"/>
+
+  <text x="240" y="285" text-anchor="middle" font-family="'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif" font-size="150" font-weight="700" fill="#f1f5f9">狼</text>
+  <text x="122" y="258" text-anchor="middle" font-family="'Cascadia Code', Consolas, 'Courier New', monospace" font-size="40" font-weight="700" fill="#e0a458" opacity="0.9">&lt;</text>
+  <text x="360" y="258" text-anchor="middle" font-family="'Cascadia Code', Consolas, 'Courier New', monospace" font-size="40" font-weight="700" fill="#e0a458" opacity="0.9">/&gt;</text>
+
+  <text x="240" y="386" text-anchor="middle" font-family="'Palatino Linotype', 'Book Antiqua', Georgia, serif" font-size="26" font-weight="700" letter-spacing="8" fill="#e0a458">MR-SEKIRO</text>
+  <text x="240" y="416" text-anchor="middle" font-family="'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif" font-size="17" letter-spacing="6" fill="#8b949e">アブドラ・フセイン</text>
+</svg>

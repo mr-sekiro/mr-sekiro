@@ -46,6 +46,8 @@
       <circle cx="155" cy="128" r="52" fill="#161b22" stroke="#e63946" stroke-width="2"/>
       <circle cx="155" cy="128" r="46" fill="none" stroke="#e0a458" stroke-width="1" opacity="0.35"/>
       <text x="155" y="146" text-anchor="middle" font-family="'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif" font-size="50" font-weight="700" fill="#f1f5f9">狼</text>
+      <text x="113" y="136" font-family="'Cascadia Code', Consolas, 'Courier New', monospace" font-size="14" font-weight="600" fill="#e0a458" opacity="0.85">&lt;</text>
+      <text x="182" y="136" font-family="'Cascadia Code', Consolas, 'Courier New', monospace" font-size="14" font-weight="600" fill="#e0a458" opacity="0.85">/&gt;</text>
     </g>
     <g class="nm">
       <text x="155" y="232" text-anchor="middle" font-family="'Palatino Linotype', 'Book Antiqua', Georgia, serif" font-size="19" font-weight="700" letter-spacing="2" fill="#f1f5f9">ABDULLAH HUSSEIN</text>

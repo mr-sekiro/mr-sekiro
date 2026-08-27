@@ -6,6 +6,9 @@
     <linearGradient id="ruleGrad" x1="0" y1="0" x2="900" y2="0" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#e63946"/><stop offset="0.4" stop-color="#e0a458"/><stop offset="1" stop-color="#e0a458" stop-opacity="0"/>
     </linearGradient>
+    <radialGradient id="dbGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ff4653" stop-opacity="0.55"/><stop offset="1" stop-color="#ff4653" stop-opacity="0"/>
+    </radialGradient>
   </defs>
   <style>
     .rule { stroke-dasharray: 900; stroke-dashoffset: 900; animation: draw 1.4s cubic-bezier(0.22,1,0.36,1) 0.25s forwards; }
@@ -14,11 +17,13 @@
     .title { animation: slideIn 0.9s cubic-bezier(0.22,1,0.36,1) both; }
     .sub { animation: slideIn 0.9s cubic-bezier(0.22,1,0.36,1) 0.2s both; }
     @keyframes slideIn { from { transform: translateX(-14px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
-    .gem { transform-box: fill-box; transform-origin: center; animation: spin 7s linear infinite; }
-    @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    .db { transform-box: fill-box; transform-origin: center; animation: dbPulse 2.4s ease-in-out infinite; }
+    @keyframes dbPulse { 0%,100% { transform: scale(1); opacity: 0.85; } 50% { transform: scale(1.35); opacity: 1; } }
   </style>
   <g class="title">
-    <rect class="gem" x="8" y="24" width="14" height="14" fill="none" stroke="#e63946" stroke-width="2.5" transform="rotate(45 15 31)"/>
+    <circle class="db" cx="19" cy="31" r="13" fill="url(#dbGlow)"/>
+    <circle cx="19" cy="31" r="5" fill="#ff4653"/>
+    <circle cx="19" cy="31" r="2" fill="#ffd9dc" opacity="0.75"/>
     <text x="44" y="41" font-family="'Palatino Linotype', 'Book Antiqua', Georgia, serif" font-size="29" font-weight="700" letter-spacing="6" fill="url(#titleGrad)">ABOUT</text>
   </g>
   <g class="sub">

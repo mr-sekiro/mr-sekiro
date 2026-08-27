@@ -28,6 +28,16 @@
 
 <br/>
 
+<img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/section-bosses.svg" alt="Boss Memories" width="100%"/>
+
+<br/>
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/bosses.svg" alt="Projects — bosses felled" width="100%"/>
+</div>
+
+<br/>
+
 <img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/section-analytics.svg" alt="Analytics" width="100%"/>
 
 <br/>

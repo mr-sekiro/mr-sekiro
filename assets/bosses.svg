@@ -1,0 +1,67 @@
+<svg width="1000" height="330" viewBox="0 0 1000 330" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bsPanel" x1="0" y1="0" x2="1000" y2="330" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="0.5" stop-color="#11161f"/>
+      <stop offset="1" stop-color="#0d1117"/>
+    </linearGradient>
+    <linearGradient id="bsSep" x1="60" y1="0" x2="940" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#30363d" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#30363d"/>
+      <stop offset="1" stop-color="#30363d" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="bsDots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.5" fill="#8b949e" fill-opacity="0.06"/>
+    </pattern>
+    <clipPath id="bsFrame"><rect width="1000" height="330" rx="14"/></clipPath>
+  </defs>
+
+  <style>
+    .brow { animation: browIn 0.9s cubic-bezier(0.22,1,0.36,1) both; }
+    @keyframes browIn { from { transform: translateX(-24px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+    .b1 { animation-delay: 0.2s; } .b2 { animation-delay: 0.5s; } .b3 { animation-delay: 0.8s; }
+    .stamp { transform-box: fill-box; transform-origin: center; animation: stampIn 0.45s cubic-bezier(0.34,1.56,0.64,1) both; }
+    @keyframes stampIn { from { transform: scale(2) rotate(-16deg); opacity: 0; } to { transform: scale(1) rotate(-8deg); opacity: 1; } }
+    .s1 { animation-delay: 0.9s; } .s2 { animation-delay: 1.2s; } .s3 { animation-delay: 1.5s; }
+  </style>
+
+  <g clip-path="url(#bsFrame)">
+    <rect width="1000" height="330" fill="url(#bsPanel)"/>
+    <rect width="1000" height="330" fill="url(#bsDots)"/>
+    <text x="990" y="315" text-anchor="end" font-family="'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif" font-size="190" font-weight="700" fill="#e63946" opacity="0.045">殺</text>
+
+    <g class="brow b1">
+      <text x="72" y="76" font-family="'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif" font-size="30" font-weight="700" fill="#e0a458" opacity="0.9">壱</text>
+      <text x="130" y="66" font-family="'Palatino Linotype', 'Book Antiqua', Georgia, serif" font-size="27" font-weight="700" letter-spacing="5" fill="#f1f5f9">SPEAKOUT</text>
+      <text x="130" y="90" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13" letter-spacing="1" fill="#8b949e">EdTech speaking platform&#160;&#160;·&#160;&#160;ASP.NET Core 8 × Next.js 16&#160;&#160;·&#160;&#160;Azure Speech · Redis · OpenTelemetry</text>
+    </g>
+    <g class="stamp s1">
+      <rect x="836" y="38" width="120" height="44" rx="6" fill="none" stroke="#e63946" stroke-width="2.5"/>
+      <text x="896" y="71" text-anchor="middle" font-family="'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif" font-size="30" font-weight="700" fill="#e63946">忍殺</text>
+    </g>
+    <rect x="60" y="112" width="880" height="1" fill="url(#bsSep)"/>
+
+    <g class="brow b2">
+      <text x="72" y="180" font-family="'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif" font-size="30" font-weight="700" fill="#e0a458" opacity="0.9">弐</text>
+      <text x="130" y="170" font-family="'Palatino Linotype', 'Book Antiqua', Georgia, serif" font-size="27" font-weight="700" letter-spacing="5" fill="#f1f5f9">IGEXAMS</text>
+      <text x="130" y="194" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13" letter-spacing="1" fill="#8b949e">Exam management platform&#160;&#160;·&#160;&#160;ASP.NET Core MVC&#160;&#160;·&#160;&#160;Clean Architecture · QuestPDF · ClosedXML</text>
+    </g>
+    <g class="stamp s2">
+      <rect x="836" y="142" width="120" height="44" rx="6" fill="none" stroke="#e63946" stroke-width="2.5"/>
+      <text x="896" y="175" text-anchor="middle" font-family="'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif" font-size="30" font-weight="700" fill="#e63946">忍殺</text>
+    </g>
+    <rect x="60" y="216" width="880" height="1" fill="url(#bsSep)"/>
+
+    <g class="brow b3">
+      <text x="72" y="284" font-family="'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif" font-size="30" font-weight="700" fill="#e0a458" opacity="0.9">参</text>
+      <text x="130" y="274" font-family="'Palatino Linotype', 'Book Antiqua', Georgia, serif" font-size="27" font-weight="700" letter-spacing="5" fill="#f1f5f9">STRIXON</text>
+      <text x="130" y="298" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13" letter-spacing="1" fill="#8b949e">Gaming-performance storefront + admin&#160;&#160;·&#160;&#160;ASP.NET Core MVC 8&#160;&#160;·&#160;&#160;SkiaSharp · Google OAuth</text>
+    </g>
+    <g class="stamp s3">
+      <rect x="836" y="246" width="120" height="44" rx="6" fill="none" stroke="#e63946" stroke-width="2.5"/>
+      <text x="896" y="279" text-anchor="middle" font-family="'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif" font-size="30" font-weight="700" fill="#e63946">忍殺</text>
+    </g>
+  </g>
+
+  <rect x="0.5" y="0.5" width="999" height="329" rx="14" stroke="#21262d"/>
+</svg>

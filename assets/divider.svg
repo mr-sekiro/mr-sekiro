@@ -1,26 +1,47 @@
-<svg width="900" height="24" viewBox="0 0 900 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="900" height="44" viewBox="0 0 900 44" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="lineGrad" x1="0" y1="0" x2="900" y2="0" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#30363d" stop-opacity="0"/>
-      <stop offset="0.5" stop-color="#30363d"/>
+    <linearGradient id="dvL" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0" stop-color="#30363d"/>
       <stop offset="1" stop-color="#30363d" stop-opacity="0"/>
     </linearGradient>
-    <radialGradient id="glowGrad" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#e63946" stop-opacity="0.6"/>
-      <stop offset="1" stop-color="#e63946" stop-opacity="0"/>
+    <linearGradient id="dvR" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#30363d"/>
+      <stop offset="1" stop-color="#30363d" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="dvGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#e0a458" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#e0a458" stop-opacity="0"/>
     </radialGradient>
   </defs>
   <style>
-    .traveler { animation: travel 6s ease-in-out infinite alternate; }
-    @keyframes travel {
-      from { transform: translateX(80px); }
-      to { transform: translateX(820px); }
+    .flameO { transform-box: fill-box; transform-origin: center bottom; animation: flick 1.1s ease-in-out infinite alternate; }
+    .flameI { transform-box: fill-box; transform-origin: center bottom; animation: flick 0.8s ease-in-out 0.2s infinite alternate-reverse; }
+    @keyframes flick {
+      from { transform: scaleY(1) scaleX(1); opacity: 0.85; }
+      to { transform: scaleY(1.18) scaleX(0.92); opacity: 1; }
     }
+    .glowP { transform-box: fill-box; transform-origin: center; animation: gp 2.6s ease-in-out infinite; }
+    @keyframes gp { 0%,100% { transform: scale(1); opacity: 0.8; } 50% { transform: scale(1.25); opacity: 1; } }
+    .spark { animation: sprise ease-in infinite; }
+    @keyframes sprise {
+      0% { transform: translateY(0); opacity: 0; }
+      15% { opacity: 0.9; }
+      100% { transform: translateY(-24px); opacity: 0; }
+    }
+    .sp1 { animation-duration: 2.2s; }
+    .sp2 { animation-duration: 3s; animation-delay: 1.1s; }
   </style>
-  <rect x="0" y="11" width="900" height="2" rx="1" fill="url(#lineGrad)"/>
-  <g class="traveler">
-    <circle cx="0" cy="12" r="10" fill="url(#glowGrad)"/>
-    <circle cx="0" cy="12" r="3" fill="#e63946"/>
-    <circle cx="0" cy="12" r="1.2" fill="#ffd9a0"/>
-  </g>
+
+  <rect x="0" y="27" width="415" height="1.5" rx="0.75" fill="url(#dvL)"/>
+  <rect x="485" y="27" width="415" height="1.5" rx="0.75" fill="url(#dvR)"/>
+
+  <circle class="glowP" cx="450" cy="24" r="20" fill="url(#dvGlow)"/>
+  <path class="flameO" d="M450 8 C457 15 459 22 450 32 C441 22 443 15 450 8" fill="#e0a458" opacity="0.55"/>
+  <path class="flameI" d="M450 15 C454 19 455 24 450 30 C445 24 446 19 450 15" fill="#e63946"/>
+  <circle cx="450" cy="27" r="1.6" fill="#ffe9c9"/>
+
+  <g transform="translate(444,16)"><circle class="spark sp1" r="1.2" fill="#e0a458"/></g>
+  <g transform="translate(457,14)"><circle class="spark sp2" r="1" fill="#e63946"/></g>
+
+  <rect x="429" y="35" width="42" height="2" rx="1" fill="#30363d"/>
 </svg>
