@@ -1,4 +1,4 @@
-<svg width="700" height="160" viewBox="0 0 700 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="700" height="175" viewBox="0 0 700 175" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="qRuleL" x1="1" y1="0" x2="0" y2="0">
       <stop offset="0" stop-color="#e0a458"/>
@@ -8,6 +8,19 @@
       <stop offset="0" stop-color="#e0a458"/>
       <stop offset="1" stop-color="#e0a458" stop-opacity="0"/>
     </linearGradient>
+    <linearGradient id="enGrad" x1="180" y1="0" x2="520" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e63946"/>
+      <stop offset="0.5" stop-color="#f5f0e6"/>
+      <stop offset="1" stop-color="#e0a458"/>
+    </linearGradient>
+    <linearGradient id="enShine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="enClip">
+      <text x="350" y="152" text-anchor="middle" font-family="'Palatino Linotype', 'Book Antiqua', Georgia, serif" font-size="27" font-weight="700" font-style="italic" letter-spacing="4">Hesitation is defeat.</text>
+    </clipPath>
   </defs>
   <style>
     .jp { animation: qIn 1.3s cubic-bezier(0.22,1,0.36,1) 0.2s both; }
@@ -25,6 +38,8 @@
     @keyframes gemPulse { 0%,100% { opacity: 0.7; } 50% { opacity: 1; } }
     .mark { animation: markIn 2s ease-out 0.4s both; }
     @keyframes markIn { from { opacity: 0; } to { opacity: 0.06; } }
+    .enShine { animation: enSweep 5s ease-in-out 2.2s infinite; }
+    @keyframes enSweep { 0% { transform: translateX(-200px); } 45%, 100% { transform: translateX(760px); } }
   </style>
 
   <text class="mark" x="350" y="120" text-anchor="middle" font-family="'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif" font-size="130" font-weight="700" fill="#e63946" opacity="0.06">迷</text>
@@ -38,6 +53,9 @@
   <rect class="gem" x="345" y="103" width="9" height="9" fill="none" stroke="#e63946" stroke-width="1.8"/>
 
   <g class="en">
-    <text x="350" y="143" text-anchor="middle" font-family="'Palatino Linotype', 'Book Antiqua', Georgia, serif" font-size="21" font-style="italic" letter-spacing="3.5" fill="#e8edf3">Hesitation is <tspan fill="#e0a458">defeat</tspan>.</text>
+    <g clip-path="url(#enClip)">
+      <rect x="150" y="122" width="400" height="42" fill="url(#enGrad)"/>
+      <rect class="enShine" x="150" y="122" width="90" height="42" fill="url(#enShine)" transform="skewX(-20)"/>
+    </g>
   </g>
 </svg>
