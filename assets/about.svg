@@ -60,7 +60,7 @@
     <g class="row w1">
       <rect x="348" y="61" width="8" height="8" fill="none" stroke="#e63946" stroke-width="1.8" transform="rotate(45 352 65)"/>
       <text x="372" y="70" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="2.5" fill="#e0a458">ROLE</text>
-      <text x="510" y="70" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14.5" font-weight="500" fill="#e8edf3">Full-Stack Developer&#160;&#160;—&#160;&#160;.NET × React</text>
+      <text x="510" y="70" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14.5" font-weight="500" fill="#e8edf3">Full-Stack Developer&#160;&#160;·&#160;&#160;.NET × React</text>
     </g>
     <g class="row w2">
       <rect x="348" y="98" width="8" height="8" fill="none" stroke="#e63946" stroke-width="1.8" transform="rotate(45 352 102)"/>

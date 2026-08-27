@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/hero.svg" alt="Abdullah Hussein — Full-Stack .NET Developer" width="100%"/></a>
+  <a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/hero.svg" alt="Abdullah Hussein · Full-Stack .NET Developer" width="100%"/></a>
 </div>
 
 <div align="center">
@@ -13,7 +13,7 @@
 <br/>
 
 <div align="center">
-  <a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/about.svg" alt="Character profile — Abdullah Hussein" width="100%"/></a>
+  <a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/about.svg" alt="Character profile of Abdullah Hussein" width="100%"/></a>
 </div>
 
 <br/>
@@ -33,9 +33,9 @@
 <br/>
 
 <div align="center">
-  <a href="https://speak-out-student.vercel.app/"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/boss-1.svg" alt="SpeakOut — visit site" width="100%"/></a>
-  <a href="https://igcse-exams.com/"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/boss-2.svg" alt="IGExams — visit site" width="100%"/></a>
-  <a href="https://strixonstore.com/"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/boss-3.svg" alt="Strixon — visit site" width="100%"/></a>
+  <a href="https://speak-out-student.vercel.app/"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/boss-1.svg" alt="Visit SpeakOut" width="100%"/></a>
+  <a href="https://igcse-exams.com/"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/boss-2.svg" alt="Visit IGExams" width="100%"/></a>
+  <a href="https://strixonstore.com/"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/boss-3.svg" alt="Visit Strixon" width="100%"/></a>
 </div>
 
 <br/>
