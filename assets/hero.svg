@@ -95,6 +95,18 @@
     .e3 { animation-duration: 5.5s; animation-delay: 4s; }
     .e4 { animation-duration: 8s; animation-delay: 1s; }
     .e5 { animation-duration: 6.8s; animation-delay: 3.2s; }
+    .hln { opacity: 0; animation: hcycle 18s linear infinite; }
+    .h1 { animation-delay: 0s; }
+    .h2 { animation-delay: 4.5s; }
+    .h3 { animation-delay: 9s; }
+    .h4 { animation-delay: 13.5s; }
+    @keyframes hcycle {
+      0% { opacity: 0; transform: translateY(5px); }
+      2% { opacity: 1; transform: translateY(0); }
+      23% { opacity: 1; transform: translateY(0); }
+      25% { opacity: 0; transform: translateY(-4px); }
+      100% { opacity: 0; }
+    }
     .posture {
       transform-box: fill-box;
       transform-origin: center;
@@ -106,8 +118,6 @@
     @keyframes kataIn { from { transform: translateY(-10px); opacity: 0; } to { transform: translateY(0); opacity: 0.65; } }
     .kdb { transform-box: fill-box; transform-origin: center; animation: kdbPulse 2.4s ease-in-out 1.6s infinite; opacity: 0; }
     @keyframes kdbPulse { 0%,100% { transform: scale(1); opacity: 0.8; } 50% { transform: scale(1.4); opacity: 1; } }
-    .corner { stroke-dasharray: 60; stroke-dashoffset: 60; animation: drawCorner 1.2s ease-out 1.5s forwards; }
-    @keyframes drawCorner { to { stroke-dashoffset: 0; } }
   </style>
 
   <g clip-path="url(#frame)">
@@ -174,7 +184,10 @@
     </g>
 
     <g class="fadeUp d3">
-      <text x="500" y="292" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="500" letter-spacing="2.5" fill="#8b949e">C#  ·  ASP.NET CORE  ·  REACT  ·  NEXT.JS  ·  SQL SERVER  ·  CLEAN ARCHITECTURE</text>
+      <g class="hln h1"><text x="500" y="292" text-anchor="middle" font-family="'Cascadia Code', Consolas, 'Courier New', monospace" font-size="14.5" letter-spacing="1" fill="#a8b3bf">Full-stack systems&#160;&#160;·&#160;&#160;<tspan fill="#e63946">ASP.NET Core 8</tspan>&#160;&#160;×&#160;&#160;<tspan fill="#e0a458">React 19</tspan></text></g>
+      <g class="hln h2"><text x="500" y="292" text-anchor="middle" font-family="'Cascadia Code', Consolas, 'Courier New', monospace" font-size="14.5" letter-spacing="1" fill="#a8b3bf">Clean Architecture&#160;&#160;·&#160;&#160;SOLID&#160;&#160;·&#160;&#160;<tspan fill="#e0a458">Design Patterns</tspan></text></g>
+      <g class="hln h3"><text x="500" y="292" text-anchor="middle" font-family="'Cascadia Code', Consolas, 'Courier New', monospace" font-size="14.5" letter-spacing="1" fill="#a8b3bf">EF Core&#160;&#160;·&#160;&#160;SQL Server&#160;&#160;·&#160;&#160;Redis&#160;&#160;·&#160;&#160;<tspan fill="#e63946">Docker</tspan>&#160;&#160;·&#160;&#160;OpenTelemetry</text></g>
+      <g class="hln h4"><text x="500" y="292" text-anchor="middle" font-family="'Cascadia Code', Consolas, 'Courier New', monospace" font-size="14.5" letter-spacing="1" fill="#a8b3bf">Code that ships is good.&#160;&#160;<tspan fill="#e0a458">Code that lasts is better.</tspan></text></g>
     </g>
 
     <g transform="translate(150,0)"><g class="p1"><g class="fall"><g class="sway"><path class="spin" d="M0 -6 C4 -3 4 3 0 6 C-4 3 -4 -3 0 -6" fill="#dd8f99" opacity="0.7"/></g></g></g></g>
@@ -195,10 +208,6 @@
 
     <rect x="0" y="0" width="1000" height="3" fill="url(#accentLine)"/>
     <rect x="0" y="357" width="1000" height="3" fill="url(#accentLine)"/>
-    <path class="corner" d="M 24 54 L 24 24 L 54 24" stroke="#e63946" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-    <path class="corner" d="M 946 24 L 976 24 L 976 54" stroke="#e0a458" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-    <path class="corner" d="M 976 306 L 976 336 L 946 336" stroke="#e63946" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-    <path class="corner" d="M 54 336 L 24 336 L 24 306" stroke="#e0a458" stroke-width="2.5" fill="none" stroke-linecap="round"/>
   </g>
 
   <rect x="0.5" y="0.5" width="999" height="359" rx="16" stroke="#21262d"/>

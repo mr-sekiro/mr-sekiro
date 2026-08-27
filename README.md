@@ -1,9 +1,5 @@
 <div align="center">
-  <a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/hero.svg" alt="Abdullah Hussein · Full-Stack .NET Developer" width="100%"/></a>
-</div>
-
-<div align="center">
-  <a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/dialogue.svg?v=2" alt="Taglines" width="100%"/></a>
+  <a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/hero.svg?v=3" alt="Abdullah Hussein · Full-Stack .NET Developer" width="100%"/></a>
 </div>
 
 <br/>
