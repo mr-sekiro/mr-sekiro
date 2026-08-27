@@ -1,0 +1,50 @@
+<svg width="1000" height="118" viewBox="0 0 1000 118" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bcPanel2" x1="0" y1="0" x2="1000" y2="118" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d1117"/><stop offset="0.5" stop-color="#131926"/><stop offset="1" stop-color="#0d1117"/>
+    </linearGradient>
+    <linearGradient id="bcBar2" x1="0" y1="0" x2="0" y2="118" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e63946"/><stop offset="1" stop-color="#e0a458"/>
+    </linearGradient>
+    <pattern id="bcDots2" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.5" fill="#8b949e" fill-opacity="0.06"/>
+    </pattern>
+    <clipPath id="bcFrame2"><rect width="1000" height="118" rx="12"/></clipPath>
+  </defs>
+  <style>
+    .in { animation: cardIn 0.9s cubic-bezier(0.22,1,0.36,1) both; }
+    @keyframes cardIn { from { transform: translateX(-20px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+    .stamp { transform-box: fill-box; transform-origin: center; animation: stampIn 0.45s cubic-bezier(0.34,1.56,0.64,1) 0.7s both; }
+    @keyframes stampIn { from { transform: scale(2) rotate(-16deg); opacity: 0; } to { transform: scale(1) rotate(-8deg); opacity: 1; } }
+    .live { animation: livePulse 2s ease-in-out infinite; }
+    @keyframes livePulse { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
+    .enter { animation: enterIn 0.8s ease-out 1s both, enterPulse 3s ease-in-out 2s infinite; }
+    @keyframes enterIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes enterPulse { 0%,100% { opacity: 1; } 50% { opacity: 0.55; } }
+    .gem { transform-box: fill-box; transform-origin: center; animation: gemSpin 9s linear infinite; }
+    @keyframes gemSpin { from { transform: rotate(45deg); } to { transform: rotate(405deg); } }
+  </style>
+  <g clip-path="url(#bcFrame2)">
+    <rect width="1000" height="118" fill="url(#bcPanel2)"/>
+    <rect width="1000" height="118" fill="url(#bcDots2)"/>
+    <text x="992" y="108" text-anchor="end" font-family="'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif" font-size="86" font-weight="700" fill="#e63946" opacity="0.05">弐</text>
+    <rect x="0" y="0" width="5" height="118" fill="url(#bcBar2)"/>
+
+    <g class="in">
+      <rect class="gem" x="42" y="43" width="32" height="32" fill="#161b22" stroke="#e0a458" stroke-width="2" transform="rotate(45 58 59)"/>
+      <text x="58" y="68" text-anchor="middle" font-family="'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif" font-size="22" font-weight="700" fill="#e0a458">弐</text>
+
+      <text x="112" y="46" font-family="'Palatino Linotype', 'Book Antiqua', Georgia, serif" font-size="26" font-weight="700" letter-spacing="5" fill="#f1f5f9">IGEXAMS</text>
+      <text x="112" y="72" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" letter-spacing="0.5" fill="#8b949e">Exam management platform · ASP.NET Core MVC · Clean Architecture · QuestPDF · ClosedXML</text>
+      <circle class="live" cx="117" cy="93" r="3.5" fill="#e0a458"/>
+      <text x="130" y="98" font-family="'Cascadia Code', Consolas, 'Courier New', monospace" font-size="12.5" fill="#e0a458">igcse-exams.com</text>
+    </g>
+
+    <g class="stamp">
+      <rect x="810" y="37" width="112" height="44" rx="6" fill="none" stroke="#e63946" stroke-width="2.5"/>
+      <text x="866" y="70" text-anchor="middle" font-family="'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif" font-size="29" font-weight="700" fill="#e63946">忍殺</text>
+    </g>
+    <text class="enter" x="963" y="66" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="700" fill="#e0a458">&#8599;</text>
+  </g>
+  <rect x="0.5" y="0.5" width="999" height="117" rx="12" stroke="#21262d"/>
+</svg>
