@@ -1,34 +1,34 @@
 <div align="center">
-  <a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/hero.svg" alt="Abdullah Hussein · Full-Stack .NET Developer" width="100%"/></a>
+  <a><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/hero.svg" alt="Abdullah Hussein · Full-Stack .NET Developer" width="100%"/></a>
 </div>
 
 <div align="center">
-  <a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/dialogue.svg?v=2" alt="Taglines" width="100%"/></a>
+  <a><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/dialogue.svg?v=2" alt="Taglines" width="100%"/></a>
 </div>
 
 <br/>
 
-<a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/section-about.svg" alt="About" width="100%"/></a>
-
-<br/>
-
-<div align="center">
-  <a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/about.svg?v=2" alt="Character profile of Abdullah Hussein" width="100%"/></a>
-</div>
-
-<br/>
-
-<a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/section-skilltree.svg" alt="Skill Tree" width="100%"/></a>
+<a><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/section-about.svg" alt="About" width="100%"/></a>
 
 <br/>
 
 <div align="center">
-  <a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/skilltree.svg" alt="Technology skill tree" width="100%"/></a>
+  <a><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/about.svg?v=2" alt="Character profile of Abdullah Hussein" width="100%"/></a>
 </div>
 
 <br/>
 
-<a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/section-bosses.svg" alt="Boss Memories" width="100%"/></a>
+<a><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/section-skilltree.svg" alt="Skill Tree" width="100%"/></a>
+
+<br/>
+
+<div align="center">
+  <a><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/skilltree.svg" alt="Technology skill tree" width="100%"/></a>
+</div>
+
+<br/>
+
+<a><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/section-bosses.svg" alt="Boss Memories" width="100%"/></a>
 
 <br/>
 
@@ -40,32 +40,32 @@
 
 <br/>
 
-<a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/section-analytics.svg" alt="Analytics" width="100%"/></a>
+<a><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/section-analytics.svg" alt="Analytics" width="100%"/></a>
 
 <br/>
 
 <div align="center">
-  <a href="#--"><img src="https://github-readme-stats-snowy-two-18.vercel.app/api?username=mr-sekiro&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=0d1117&title_color=e63946&icon_color=e0a458&text_color=c9d1d9&ring_color=e63946" height="165" alt="GitHub stats"/></a>
+  <a><img src="https://github-readme-stats-snowy-two-18.vercel.app/api?username=mr-sekiro&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=0d1117&title_color=e63946&icon_color=e0a458&text_color=c9d1d9&ring_color=e63946" height="165" alt="GitHub stats"/></a>
   &nbsp;
-  <a href="#--"><img src="https://streak-stats.demolab.com?user=mr-sekiro&hide_border=true&background=0d1117&ring=e63946&fire=e0a458&currStreakLabel=e63946&sideLabels=c9d1d9&currStreakNum=ffffff&sideNums=e0a458&dates=8b949e" height="165" alt="Streak stats"/></a>
+  <a><img src="https://streak-stats.demolab.com?user=mr-sekiro&hide_border=true&background=0d1117&ring=e63946&fire=e0a458&currStreakLabel=e63946&sideLabels=c9d1d9&currStreakNum=ffffff&sideNums=e0a458&dates=8b949e" height="165" alt="Streak stats"/></a>
 </div>
 
 <br/>
 
 <div align="center">
-  <a href="#--"><img src="https://github-readme-stats-snowy-two-18.vercel.app/api/top-langs/?username=mr-sekiro&layout=pie&count_private=true&hide_border=true&bg_color=0d1117&title_color=e63946&text_color=c9d1d9&langs_count=8" height="200" alt="Top languages (pie)"/></a>
+  <a><img src="https://github-readme-stats-snowy-two-18.vercel.app/api/top-langs/?username=mr-sekiro&layout=pie&count_private=true&hide_border=true&bg_color=0d1117&title_color=e63946&text_color=c9d1d9&langs_count=8" height="200" alt="Top languages (pie)"/></a>
   &nbsp;
-  <a href="#--"><img src="https://github-readme-stats-snowy-two-18.vercel.app/api/top-langs/?username=mr-sekiro&layout=compact&count_private=true&hide_border=true&bg_color=0d1117&title_color=e63946&text_color=c9d1d9&langs_count=8" height="200" alt="Top languages (compact)"/></a>
+  <a><img src="https://github-readme-stats-snowy-two-18.vercel.app/api/top-langs/?username=mr-sekiro&layout=compact&count_private=true&hide_border=true&bg_color=0d1117&title_color=e63946&text_color=c9d1d9&langs_count=8" height="200" alt="Top languages (compact)"/></a>
 </div>
 
 <br/>
 
-<a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/section-contributions.svg" alt="Contributions" width="100%"/></a>
+<a><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/section-contributions.svg" alt="Contributions" width="100%"/></a>
 
 <br/>
 
 <div align="center">
-  <a href="#--"><picture>
+  <a><picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/output/github-snake-dark.svg"/>
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/output/github-snake.svg"/>
     <img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/output/github-snake-dark.svg" alt="Contribution snake" width="100%"/>
@@ -74,7 +74,7 @@
 
 <br/>
 
-<a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/section-connect.svg" alt="Connect" width="100%"/></a>
+<a><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/section-connect.svg" alt="Connect" width="100%"/></a>
 
 <br/>
 
@@ -85,12 +85,12 @@
 <br/>
 
 <div align="center">
-  <a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/divider.svg" alt="" width="100%"/></a>
+  <a><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/divider.svg" alt="" width="100%"/></a>
   <br/><br/>
-  <a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/hanko.svg" alt="Seal" width="84"/></a>
+  <a><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/hanko.svg" alt="Seal" width="84"/></a>
   <br/>
-  <a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/quote.svg" alt="Hesitation is defeat." width="700"/></a>
+  <a><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/quote.svg" alt="Hesitation is defeat." width="700"/></a>
   <br/>
 </div>
 
-<a href="#--"><img src="https://capsule-render.vercel.app/api?type=waving&color=0:e63946,50:8b2635,100:e0a458&height=110&section=footer" width="100%" alt=""/></a>
+<a><img src="https://capsule-render.vercel.app/api?type=waving&color=0:e63946,50:8b2635,100:e0a458&height=110&section=footer" width="100%" alt=""/></a>
