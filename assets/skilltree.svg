@@ -1,9 +1,9 @@
-<svg width="1000" height="500" viewBox="0 0 1000 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="1000" height="545" viewBox="0 0 1000 545" fill="none" xmlns="http://www.w3.org/2000/svg">
 <defs>
-<linearGradient id="panelGrad" x1="0" y1="0" x2="1000" y2="500" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0d1117"/><stop offset="0.5" stop-color="#11161f"/><stop offset="1" stop-color="#0d1117"/></linearGradient>
+<linearGradient id="panelGrad" x1="0" y1="0" x2="1000" y2="545" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0d1117"/><stop offset="0.5" stop-color="#11161f"/><stop offset="1" stop-color="#0d1117"/></linearGradient>
 <linearGradient id="trunkGrad" x1="90" y1="0" x2="915" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e0a458" stop-opacity="0.15"/><stop offset="0.5" stop-color="#e63946" stop-opacity="0.8"/><stop offset="1" stop-color="#e0a458" stop-opacity="0.15"/></linearGradient>
 <pattern id="panelDots" width="26" height="26" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.5" fill="#8b949e" fill-opacity="0.06"/></pattern>
-<clipPath id="panelFrame"><rect width="1000" height="500" rx="14"/></clipPath>
+<clipPath id="panelFrame"><rect width="1000" height="545" rx="14"/></clipPath>
 </defs>
 <style>
 .trunk { stroke-dasharray: 420; stroke-dashoffset: 420; animation: draw 0.9s cubic-bezier(0.22,1,0.36,1) 0.5s forwards; }
@@ -24,9 +24,9 @@
 @keyframes glowPulse { 0%,100% { opacity: 0.25; transform: scale(1);} 50% { opacity: 0.7; transform: scale(1.25);} }
 </style>
 <g clip-path="url(#panelFrame)">
-<rect width="1000" height="500" fill="url(#panelGrad)"/>
-<rect width="1000" height="500" fill="url(#panelDots)"/>
-<text x="990" y="480" text-anchor="end" font-family="'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif" font-size="200" font-weight="700" fill="#e63946" opacity="0.045">技</text>
+<rect width="1000" height="545" fill="url(#panelGrad)"/>
+<rect width="1000" height="545" fill="url(#panelDots)"/>
+<text x="990" y="525" text-anchor="end" font-family="'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif" font-size="200" font-weight="700" fill="#e63946" opacity="0.045">技</text>
 <line class="stem" x1="502.5" y1="82" x2="502.5" y2="112" stroke="#30363d" stroke-width="2"/>
 <path class="trunk" d="M502.5 112 H 90" stroke="url(#trunkGrad)" stroke-width="2"/>
 <path class="trunk" d="M502.5 112 H 915" stroke="url(#trunkGrad)" stroke-width="2"/>
@@ -45,13 +45,14 @@
 <circle class="glow" cx="90" cy="178" r="14" fill="#e63946" opacity="0.3" style="animation-delay:1.85s"/>
 <circle class="node" style="animation-delay:1.35s" cx="90" cy="178" r="9" fill="#e63946" stroke="#e0a458" stroke-width="2"/>
 <g class="lbl" style="animation-delay:1.43s"><text x="90" y="205" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="600" letter-spacing="0.5" fill="#f1f5f9">ASP.NET CORE 8</text></g>
-<circle class="node" style="animation-delay:1.46s" cx="90" cy="232" r="6.5" fill="#1c2430" stroke="#e63946" stroke-width="1.8"/>
-<g class="lbl" style="animation-delay:1.54s"><text x="90" y="259" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="500" letter-spacing="0.5" fill="#c9d1d9">EF CORE</text></g>
-<circle class="node" style="animation-delay:1.57s" cx="90" cy="286" r="6.5" fill="#1c2430" stroke="#e63946" stroke-width="1.8"/>
+<circle class="glow" cx="90" cy="232" r="14" fill="#e63946" opacity="0.3" style="animation-delay:1.96s"/>
+<circle class="node" style="animation-delay:1.46s" cx="90" cy="232" r="9" fill="#e63946" stroke="#e0a458" stroke-width="2"/>
+<g class="lbl" style="animation-delay:1.54s"><text x="90" y="259" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="600" letter-spacing="0.5" fill="#f1f5f9">EF CORE</text></g>
+<circle class="node" style="animation-delay:1.57s" cx="90" cy="286" r="7" fill="#b3242c" stroke="#e63946" stroke-width="1.5"/>
 <g class="lbl" style="animation-delay:1.65s"><text x="90" y="313" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="500" letter-spacing="0.5" fill="#c9d1d9">ADO.NET</text></g>
-<circle class="node" style="animation-delay:1.68s" cx="90" cy="340" r="6.5" fill="#1c2430" stroke="#e63946" stroke-width="1.8"/>
+<circle class="node" style="animation-delay:1.68s" cx="90" cy="340" r="7" fill="#b3242c" stroke="#e63946" stroke-width="1.5"/>
 <g class="lbl" style="animation-delay:1.76s"><text x="90" y="367" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="500" letter-spacing="0.5" fill="#c9d1d9">NODE.JS</text></g>
-<circle class="node" style="animation-delay:1.79s" cx="90" cy="394" r="6.5" fill="#1c2430" stroke="#e63946" stroke-width="1.8"/>
+<circle class="node" style="animation-delay:1.79s" cx="90" cy="394" r="7" fill="#b3242c" stroke="#e63946" stroke-width="1.5"/>
 <g class="lbl" style="animation-delay:1.87s"><text x="90" y="421" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="500" letter-spacing="0.5" fill="#c9d1d9">EXPRESS</text></g>
 <line class="vein" style="animation-delay:1.12s" x1="255" y1="112" x2="255" y2="448" stroke="#30363d" stroke-width="1.6"/>
 <g class="head" style="animation-delay:1.02s">
@@ -63,15 +64,17 @@
 <circle class="glow" cx="255" cy="178" r="14" fill="#e63946" opacity="0.3" style="animation-delay:1.97s"/>
 <circle class="node" style="animation-delay:1.47s" cx="255" cy="178" r="9" fill="#e63946" stroke="#e0a458" stroke-width="2"/>
 <g class="lbl" style="animation-delay:1.55s"><text x="255" y="205" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="600" letter-spacing="0.5" fill="#f1f5f9">REACT 19</text></g>
-<circle class="node" style="animation-delay:1.58s" cx="255" cy="232" r="6.5" fill="#1c2430" stroke="#e63946" stroke-width="1.8"/>
-<g class="lbl" style="animation-delay:1.66s"><text x="255" y="259" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="500" letter-spacing="0.5" fill="#c9d1d9">NEXT.JS 16</text></g>
-<circle class="node" style="animation-delay:1.69s" cx="255" cy="286" r="6.5" fill="#1c2430" stroke="#e63946" stroke-width="1.8"/>
-<g class="lbl" style="animation-delay:1.77s"><text x="255" y="313" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="500" letter-spacing="0.5" fill="#c9d1d9">TYPESCRIPT</text></g>
-<circle class="node" style="animation-delay:1.80s" cx="255" cy="340" r="6.5" fill="#1c2430" stroke="#e63946" stroke-width="1.8"/>
+<circle class="glow" cx="255" cy="232" r="14" fill="#e63946" opacity="0.3" style="animation-delay:2.08s"/>
+<circle class="node" style="animation-delay:1.58s" cx="255" cy="232" r="9" fill="#e63946" stroke="#e0a458" stroke-width="2"/>
+<g class="lbl" style="animation-delay:1.66s"><text x="255" y="259" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="600" letter-spacing="0.5" fill="#f1f5f9">NEXT.JS 16</text></g>
+<circle class="glow" cx="255" cy="286" r="14" fill="#e63946" opacity="0.3" style="animation-delay:2.19s"/>
+<circle class="node" style="animation-delay:1.69s" cx="255" cy="286" r="9" fill="#e63946" stroke="#e0a458" stroke-width="2"/>
+<g class="lbl" style="animation-delay:1.77s"><text x="255" y="313" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="600" letter-spacing="0.5" fill="#f1f5f9">TYPESCRIPT</text></g>
+<circle class="node" style="animation-delay:1.80s" cx="255" cy="340" r="7" fill="#b3242c" stroke="#e63946" stroke-width="1.5"/>
 <g class="lbl" style="animation-delay:1.88s"><text x="255" y="367" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="500" letter-spacing="0.5" fill="#c9d1d9">TAILWIND CSS</text></g>
-<circle class="node" style="animation-delay:1.91s" cx="255" cy="394" r="6.5" fill="#1c2430" stroke="#e63946" stroke-width="1.8"/>
+<circle class="node" style="animation-delay:1.91s" cx="255" cy="394" r="7" fill="#b3242c" stroke="#e63946" stroke-width="1.5"/>
 <g class="lbl" style="animation-delay:1.99s"><text x="255" y="421" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="500" letter-spacing="0.5" fill="#c9d1d9">VITE</text></g>
-<circle class="node" style="animation-delay:2.02s" cx="255" cy="448" r="6.5" fill="#1c2430" stroke="#e63946" stroke-width="1.8"/>
+<circle class="node" style="animation-delay:2.02s" cx="255" cy="448" r="7" fill="#b3242c" stroke="#e63946" stroke-width="1.5"/>
 <g class="lbl" style="animation-delay:2.10s"><text x="255" y="475" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="500" letter-spacing="0.5" fill="#c9d1d9">GSAP</text></g>
 <line class="vein" style="animation-delay:1.24s" x1="420" y1="112" x2="420" y2="340" stroke="#30363d" stroke-width="1.6"/>
 <g class="head" style="animation-delay:1.14s">
@@ -83,11 +86,12 @@
 <circle class="glow" cx="420" cy="178" r="14" fill="#e63946" opacity="0.3" style="animation-delay:2.09s"/>
 <circle class="node" style="animation-delay:1.59s" cx="420" cy="178" r="9" fill="#e63946" stroke="#e0a458" stroke-width="2"/>
 <g class="lbl" style="animation-delay:1.67s"><text x="420" y="205" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="600" letter-spacing="0.5" fill="#f1f5f9">SQL SERVER</text></g>
-<circle class="node" style="animation-delay:1.70s" cx="420" cy="232" r="6.5" fill="#1c2430" stroke="#e63946" stroke-width="1.8"/>
-<g class="lbl" style="animation-delay:1.78s"><text x="420" y="259" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="500" letter-spacing="0.5" fill="#c9d1d9">T-SQL</text></g>
-<circle class="node" style="animation-delay:1.81s" cx="420" cy="286" r="6.5" fill="#1c2430" stroke="#e63946" stroke-width="1.8"/>
+<circle class="glow" cx="420" cy="232" r="14" fill="#e63946" opacity="0.3" style="animation-delay:2.20s"/>
+<circle class="node" style="animation-delay:1.70s" cx="420" cy="232" r="9" fill="#e63946" stroke="#e0a458" stroke-width="2"/>
+<g class="lbl" style="animation-delay:1.78s"><text x="420" y="259" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="600" letter-spacing="0.5" fill="#f1f5f9">T-SQL</text></g>
+<circle class="node" style="animation-delay:1.81s" cx="420" cy="286" r="7" fill="#b3242c" stroke="#e63946" stroke-width="1.5"/>
 <g class="lbl" style="animation-delay:1.89s"><text x="420" y="313" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="500" letter-spacing="0.5" fill="#c9d1d9">MONGODB</text></g>
-<circle class="node" style="animation-delay:1.92s" cx="420" cy="340" r="6.5" fill="#1c2430" stroke="#e63946" stroke-width="1.8"/>
+<circle class="node" style="animation-delay:1.92s" cx="420" cy="340" r="7" fill="#b3242c" stroke="#e63946" stroke-width="1.5"/>
 <g class="lbl" style="animation-delay:2.00s"><text x="420" y="367" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="500" letter-spacing="0.5" fill="#c9d1d9">REDIS</text></g>
 <line class="vein" style="animation-delay:1.36s" x1="585" y1="112" x2="585" y2="394" stroke="#30363d" stroke-width="1.6"/>
 <g class="head" style="animation-delay:1.26s">
@@ -99,13 +103,13 @@
 <circle class="glow" cx="585" cy="178" r="14" fill="#e63946" opacity="0.3" style="animation-delay:2.21s"/>
 <circle class="node" style="animation-delay:1.71s" cx="585" cy="178" r="9" fill="#e63946" stroke="#e0a458" stroke-width="2"/>
 <g class="lbl" style="animation-delay:1.79s"><text x="585" y="205" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="600" letter-spacing="0.5" fill="#f1f5f9">DOCKER</text></g>
-<circle class="node" style="animation-delay:1.82s" cx="585" cy="232" r="6.5" fill="#1c2430" stroke="#e63946" stroke-width="1.8"/>
+<circle class="node" style="animation-delay:1.82s" cx="585" cy="232" r="7" fill="#b3242c" stroke="#e63946" stroke-width="1.5"/>
 <g class="lbl" style="animation-delay:1.90s"><text x="585" y="259" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="500" letter-spacing="0.5" fill="#c9d1d9">GITHUB ACTIONS</text></g>
-<circle class="node" style="animation-delay:1.93s" cx="585" cy="286" r="6.5" fill="#1c2430" stroke="#e63946" stroke-width="1.8"/>
+<circle class="node" style="animation-delay:1.93s" cx="585" cy="286" r="7" fill="#b3242c" stroke="#e63946" stroke-width="1.5"/>
 <g class="lbl" style="animation-delay:2.01s"><text x="585" y="313" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="500" letter-spacing="0.5" fill="#c9d1d9">AWS</text></g>
-<circle class="node" style="animation-delay:2.04s" cx="585" cy="340" r="6.5" fill="#1c2430" stroke="#e63946" stroke-width="1.8"/>
+<circle class="node" style="animation-delay:2.04s" cx="585" cy="340" r="7" fill="#b3242c" stroke="#e63946" stroke-width="1.5"/>
 <g class="lbl" style="animation-delay:2.12s"><text x="585" y="367" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="500" letter-spacing="0.5" fill="#c9d1d9">OPENTELEMETRY</text></g>
-<circle class="node" style="animation-delay:2.15s" cx="585" cy="394" r="6.5" fill="#1c2430" stroke="#e63946" stroke-width="1.8"/>
+<circle class="node" style="animation-delay:2.15s" cx="585" cy="394" r="7" fill="#b3242c" stroke="#e63946" stroke-width="1.5"/>
 <g class="lbl" style="animation-delay:2.23s"><text x="585" y="421" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="500" letter-spacing="0.5" fill="#c9d1d9">PROMETHEUS</text></g>
 <line class="vein" style="animation-delay:1.48s" x1="750" y1="112" x2="750" y2="448" stroke="#30363d" stroke-width="1.6"/>
 <g class="head" style="animation-delay:1.38s">
@@ -117,15 +121,17 @@
 <circle class="glow" cx="750" cy="178" r="14" fill="#e63946" opacity="0.3" style="animation-delay:2.33s"/>
 <circle class="node" style="animation-delay:1.83s" cx="750" cy="178" r="9" fill="#e63946" stroke="#e0a458" stroke-width="2"/>
 <g class="lbl" style="animation-delay:1.91s"><text x="750" y="205" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="600" letter-spacing="0.5" fill="#f1f5f9">XUNIT</text></g>
-<circle class="node" style="animation-delay:1.94s" cx="750" cy="232" r="6.5" fill="#1c2430" stroke="#e63946" stroke-width="1.8"/>
-<g class="lbl" style="animation-delay:2.02s"><text x="750" y="259" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="500" letter-spacing="0.5" fill="#c9d1d9">SWAGGER</text></g>
-<circle class="node" style="animation-delay:2.05s" cx="750" cy="286" r="6.5" fill="#1c2430" stroke="#e63946" stroke-width="1.8"/>
-<g class="lbl" style="animation-delay:2.13s"><text x="750" y="313" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="500" letter-spacing="0.5" fill="#c9d1d9">POSTMAN</text></g>
-<circle class="node" style="animation-delay:2.16s" cx="750" cy="340" r="6.5" fill="#1c2430" stroke="#e63946" stroke-width="1.8"/>
+<circle class="glow" cx="750" cy="232" r="14" fill="#e63946" opacity="0.3" style="animation-delay:2.44s"/>
+<circle class="node" style="animation-delay:1.94s" cx="750" cy="232" r="9" fill="#e63946" stroke="#e0a458" stroke-width="2"/>
+<g class="lbl" style="animation-delay:2.02s"><text x="750" y="259" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="600" letter-spacing="0.5" fill="#f1f5f9">SWAGGER</text></g>
+<circle class="glow" cx="750" cy="286" r="14" fill="#e63946" opacity="0.3" style="animation-delay:2.55s"/>
+<circle class="node" style="animation-delay:2.05s" cx="750" cy="286" r="9" fill="#e63946" stroke="#e0a458" stroke-width="2"/>
+<g class="lbl" style="animation-delay:2.13s"><text x="750" y="313" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="600" letter-spacing="0.5" fill="#f1f5f9">POSTMAN</text></g>
+<circle class="node" style="animation-delay:2.16s" cx="750" cy="340" r="7" fill="#b3242c" stroke="#e63946" stroke-width="1.5"/>
 <g class="lbl" style="animation-delay:2.24s"><text x="750" y="367" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="500" letter-spacing="0.5" fill="#c9d1d9">QUESTPDF</text></g>
-<circle class="node" style="animation-delay:2.27s" cx="750" cy="394" r="6.5" fill="#1c2430" stroke="#e63946" stroke-width="1.8"/>
+<circle class="node" style="animation-delay:2.27s" cx="750" cy="394" r="7" fill="#b3242c" stroke="#e63946" stroke-width="1.5"/>
 <g class="lbl" style="animation-delay:2.35s"><text x="750" y="421" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="500" letter-spacing="0.5" fill="#c9d1d9">SKIASHARP</text></g>
-<circle class="node" style="animation-delay:2.38s" cx="750" cy="448" r="6.5" fill="#1c2430" stroke="#e63946" stroke-width="1.8"/>
+<circle class="node" style="animation-delay:2.38s" cx="750" cy="448" r="7" fill="#b3242c" stroke="#e63946" stroke-width="1.5"/>
 <g class="lbl" style="animation-delay:2.46s"><text x="750" y="475" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="500" letter-spacing="0.5" fill="#c9d1d9">FFMPEG</text></g>
 <line class="vein" style="animation-delay:1.60s" x1="915" y1="112" x2="915" y2="232" stroke="#30363d" stroke-width="1.6"/>
 <g class="head" style="animation-delay:1.50s">
@@ -137,8 +143,16 @@
 <circle class="glow" cx="915" cy="178" r="14" fill="#e63946" opacity="0.3" style="animation-delay:2.45s"/>
 <circle class="node" style="animation-delay:1.95s" cx="915" cy="178" r="9" fill="#e63946" stroke="#e0a458" stroke-width="2"/>
 <g class="lbl" style="animation-delay:2.03s"><text x="915" y="205" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="600" letter-spacing="0.5" fill="#f1f5f9">WPF</text></g>
-<circle class="node" style="animation-delay:2.06s" cx="915" cy="232" r="6.5" fill="#1c2430" stroke="#e63946" stroke-width="1.8"/>
-<g class="lbl" style="animation-delay:2.14s"><text x="915" y="259" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="500" letter-spacing="0.5" fill="#c9d1d9">WINFORMS</text></g>
+<circle class="glow" cx="915" cy="232" r="14" fill="#e63946" opacity="0.3" style="animation-delay:2.56s"/>
+<circle class="node" style="animation-delay:2.06s" cx="915" cy="232" r="9" fill="#e63946" stroke="#e0a458" stroke-width="2"/>
+<g class="lbl" style="animation-delay:2.14s"><text x="915" y="259" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="600" letter-spacing="0.5" fill="#f1f5f9">WINFORMS</text></g>
+<g class="lbl" style="animation-delay:2.6s">
+<circle class="glow" cx="380" cy="509" r="12" fill="#e63946" opacity="0.3" style="animation-delay:2.8s"/>
+<circle cx="380" cy="509" r="8" fill="#e63946" stroke="#e0a458" stroke-width="2"/>
+<text x="398" y="513.5" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="2" fill="#8b949e">MASTERED</text>
+<circle cx="530" cy="509" r="6.5" fill="#b3242c" stroke="#e63946" stroke-width="1.5"/>
+<text x="546" y="513.5" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="2" fill="#8b949e">TRAINED</text>
 </g>
-<rect x="0.5" y="0.5" width="999" height="499" rx="14" stroke="#21262d"/>
+</g>
+<rect x="0.5" y="0.5" width="999" height="544" rx="14" stroke="#21262d"/>
 </svg>
