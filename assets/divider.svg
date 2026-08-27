@@ -1,0 +1,26 @@
+<svg width="900" height="24" viewBox="0 0 900 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="lineGrad" x1="0" y1="0" x2="900" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#30363d" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#30363d"/>
+      <stop offset="1" stop-color="#30363d" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glowGrad" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#e63946" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#e63946" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <style>
+    .traveler { animation: travel 6s ease-in-out infinite alternate; }
+    @keyframes travel {
+      from { transform: translateX(80px); }
+      to { transform: translateX(820px); }
+    }
+  </style>
+  <rect x="0" y="11" width="900" height="2" rx="1" fill="url(#lineGrad)"/>
+  <g class="traveler">
+    <circle cx="0" cy="12" r="10" fill="url(#glowGrad)"/>
+    <circle cx="0" cy="12" r="3" fill="#e63946"/>
+    <circle cx="0" cy="12" r="1.2" fill="#ffd9a0"/>
+  </g>
+</svg>

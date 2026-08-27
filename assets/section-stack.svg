@@ -1,0 +1,27 @@
+<svg width="900" height="80" viewBox="0 0 900 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="420" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e63946"/>
+      <stop offset="1" stop-color="#e0a458"/>
+    </linearGradient>
+    <linearGradient id="ruleGrad" x1="0" y1="0" x2="900" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e63946"/>
+      <stop offset="0.35" stop-color="#e0a458"/>
+      <stop offset="1" stop-color="#e0a458" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .rule { transform-origin: 0 0; animation: grow 1.2s cubic-bezier(0.22,1,0.36,1) 0.3s both; }
+    @keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+    .title { animation: slideIn 0.9s cubic-bezier(0.22,1,0.36,1) both; }
+    @keyframes slideIn { from { transform: translateX(-14px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+    .gem { transform-box: fill-box; transform-origin: center; animation: spin 7s linear infinite; }
+    @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+  </style>
+  <g class="title">
+    <rect class="gem" x="8" y="26" width="14" height="14" fill="none" stroke="#e63946" stroke-width="2.5" transform="rotate(45 15 33)"/>
+    <text x="44" y="42" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="27" font-weight="700" letter-spacing="7" fill="url(#titleGrad)">TECH STACK</text>
+  </g>
+  <text x="893" y="52" text-anchor="end" font-family="'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif" font-size="44" font-weight="700" fill="#e63946" opacity="0.22">技</text>
+  <rect class="rule" x="8" y="62" width="884" height="2" rx="1" fill="url(#ruleGrad)"/>
+</svg>
