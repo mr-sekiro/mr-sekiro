@@ -3,7 +3,7 @@
 </div>
 
 <div align="center">
-  <a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/dialogue.svg" alt="Taglines" width="100%"/></a>
+  <a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/dialogue.svg?v=2" alt="Taglines" width="100%"/></a>
 </div>
 
 <br/>
@@ -13,7 +13,7 @@
 <br/>
 
 <div align="center">
-  <a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/about.svg" alt="Character profile of Abdullah Hussein" width="100%"/></a>
+  <a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/about.svg?v=2" alt="Character profile of Abdullah Hussein" width="100%"/></a>
 </div>
 
 <br/>
