@@ -44,8 +44,7 @@
 
   <g clip-path="url(#abFrame)">
     <rect width="1000" height="310" fill="url(#abPanel)"/>
-    <rect width="1000" height="310" fill="url(#abDots)"/>
-    <text x="14" y="290" font-family="'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif" font-size="170" font-weight="700" fill="#e63946" opacity="0.045">我</text>
+    <text x="14" y="290" font-family="'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif" font-size="170" font-weight="700" fill="#e63946" opacity="0.03">我</text>
 
     <g class="prose">
       <text x="500" y="58" text-anchor="middle" font-family="'Palatino Linotype', 'Book Antiqua', Georgia, serif" font-size="18" font-style="italic" fill="#e8edf3">I build products end to end&#160;·&#160;from the <tspan fill="#e63946">SQL schema</tspan> to the last <tspan fill="#e0a458">React pixel</tspan>.</text>

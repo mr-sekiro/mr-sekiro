@@ -4,12 +4,22 @@
 
 <br/>
 
+<a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/section-bossfile.svg" alt="Boss File" width="100%"/></a>
+
+<br/>
+
+<div align="center">
+  <a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/bossfile.svg" alt="Boss file: Abdullah Hussein" width="100%"/></a>
+</div>
+
+<br/>
+
 <a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/section-about.svg" alt="About" width="100%"/></a>
 
 <br/>
 
 <div align="center">
-  <a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/about.svg?v=3" alt="Character profile of Abdullah Hussein" width="100%"/></a>
+  <a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/about.svg?v=4" alt="Character profile of Abdullah Hussein" width="100%"/></a>
 </div>
 
 <br/>
@@ -19,7 +29,7 @@
 <br/>
 
 <div align="center">
-  <a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/skilltree.svg" alt="Technology skill tree" width="100%"/></a>
+  <a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/skilltree.svg?v=2" alt="Technology skill tree" width="100%"/></a>
 </div>
 
 <br/>
@@ -29,9 +39,9 @@
 <br/>
 
 <div align="center">
-  <a href="https://speak-out-student.vercel.app/"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/boss-1.svg" alt="Visit SpeakOut" width="100%"/></a>
-  <a href="https://igcse-exams.com/"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/boss-2.svg" alt="Visit IGExams" width="100%"/></a>
-  <a href="https://strixonstore.com/"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/boss-3.svg" alt="Visit Strixon" width="100%"/></a>
+  <a href="https://speak-out-student.vercel.app/"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/boss-1.svg?v=2" alt="Visit SpeakOut" width="100%"/></a>
+  <a href="https://igcse-exams.com/"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/boss-2.svg?v=2" alt="Visit IGExams" width="100%"/></a>
+  <a href="https://strixonstore.com/"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/boss-3.svg?v=2" alt="Visit Strixon" width="100%"/></a>
 </div>
 
 <br/>

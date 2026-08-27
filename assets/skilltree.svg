@@ -25,8 +25,7 @@
 </style>
 <g clip-path="url(#panelFrame)">
 <rect width="1000" height="545" fill="url(#panelGrad)"/>
-<rect width="1000" height="545" fill="url(#panelDots)"/>
-<text x="990" y="525" text-anchor="end" font-family="'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif" font-size="200" font-weight="700" fill="#e63946" opacity="0.045">技</text>
+<text x="990" y="525" text-anchor="end" font-family="'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif" font-size="200" font-weight="700" fill="#e63946" opacity="0.03">技</text>
 <line class="stem" x1="502.5" y1="82" x2="502.5" y2="112" stroke="#30363d" stroke-width="2"/>
 <path class="trunk" d="M502.5 112 H 90" stroke="url(#trunkGrad)" stroke-width="2"/>
 <path class="trunk" d="M502.5 112 H 915" stroke="url(#trunkGrad)" stroke-width="2"/>

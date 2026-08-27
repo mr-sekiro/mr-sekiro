@@ -1,0 +1,35 @@
+<svg width="900" height="92" viewBox="0 0 900 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="460" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e63946"/><stop offset="1" stop-color="#e0a458"/>
+    </linearGradient>
+    <linearGradient id="ruleGrad" x1="0" y1="0" x2="900" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e63946"/><stop offset="0.4" stop-color="#e0a458"/><stop offset="1" stop-color="#e0a458" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="dbGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ff4653" stop-opacity="0.55"/><stop offset="1" stop-color="#ff4653" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <style>
+    .rule { stroke-dasharray: 900; stroke-dashoffset: 900; animation: draw 1.4s cubic-bezier(0.22,1,0.36,1) 0.25s forwards; }
+    .rule2 { stroke-dasharray: 900; stroke-dashoffset: 900; animation: draw 1.4s cubic-bezier(0.22,1,0.36,1) 0.4s forwards; }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+    .title { animation: slideIn 0.9s cubic-bezier(0.22,1,0.36,1) both; }
+    .sub { animation: slideIn 0.9s cubic-bezier(0.22,1,0.36,1) 0.2s both; }
+    @keyframes slideIn { from { transform: translateX(-14px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+    .db { transform-box: fill-box; transform-origin: center; animation: dbPulse 2.4s ease-in-out infinite; }
+    @keyframes dbPulse { 0%,100% { transform: scale(1); opacity: 0.85; } 50% { transform: scale(1.35); opacity: 1; } }
+  </style>
+  <g class="title">
+    <circle class="db" cx="19" cy="31" r="13" fill="url(#dbGlow)"/>
+    <circle cx="19" cy="31" r="5" fill="#ff4653"/>
+    <circle cx="19" cy="31" r="2" fill="#ffd9dc" opacity="0.75"/>
+    <text x="44" y="41" font-family="'Palatino Linotype', 'Book Antiqua', Georgia, serif" font-size="29" font-weight="700" letter-spacing="6" fill="url(#titleGrad)">BOSS FILE</text>
+  </g>
+  <g class="sub">
+    <text x="46" y="62" font-family="'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif" font-size="12" letter-spacing="4" fill="#8b949e">記録</text>
+  </g>
+  <text x="893" y="56" text-anchor="end" font-family="'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif" font-size="48" font-weight="700" fill="#e63946" opacity="0.25">録</text>
+  <path class="rule" d="M8 78 C 240 72, 480 83, 892 76" stroke="url(#ruleGrad)" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <path class="rule2" d="M8 82 C 300 78, 560 86, 892 80" stroke="url(#ruleGrad)" stroke-width="1" stroke-linecap="round" fill="none" opacity="0.45"/>
+</svg>

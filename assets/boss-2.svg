@@ -26,8 +26,7 @@
   </style>
   <g clip-path="url(#bcFrame2)">
     <rect width="1000" height="118" fill="url(#bcPanel2)"/>
-    <rect width="1000" height="118" fill="url(#bcDots2)"/>
-    <text x="992" y="108" text-anchor="end" font-family="'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif" font-size="86" font-weight="700" fill="#e63946" opacity="0.05">弐</text>
+    <text x="992" y="108" text-anchor="end" font-family="'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif" font-size="86" font-weight="700" fill="#e63946" opacity="0.035">弐</text>
     <rect x="0" y="0" width="5" height="118" fill="url(#bcBar2)"/>
 
     <g class="in">
