@@ -9,7 +9,7 @@
 <br/>
 
 <div align="center">
-  <a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/bossfile.svg?v=4" alt="Boss file: Abdullah Hussein" width="100%"/></a>
+  <a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/bossfile.svg?v=5" alt="Boss file: Abdullah Hussein" width="100%"/></a>
 </div>
 
 <br/>
@@ -91,7 +91,7 @@
 <br/>
 
 <div align="center">
-  <a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/divider.svg" alt="" width="100%"/></a>
+  <a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/divider.svg?v=2" alt="" width="100%"/></a>
   <br/><br/>
   <a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/hanko.svg" alt="Seal" width="84"/></a>
   <br/>

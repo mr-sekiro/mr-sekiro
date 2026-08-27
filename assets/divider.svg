@@ -1,47 +1,67 @@
-<svg width="900" height="44" viewBox="0 0 900 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="900" height="80" viewBox="0 0 900 80" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="dvL" x1="1" y1="0" x2="0" y2="0">
-      <stop offset="0" stop-color="#30363d"/>
-      <stop offset="1" stop-color="#30363d" stop-opacity="0"/>
+      <stop offset="0" stop-color="#e0a458"/>
+      <stop offset="0.55" stop-color="#7a5a33"/>
+      <stop offset="1" stop-color="#7a5a33" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="dvR" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#30363d"/>
-      <stop offset="1" stop-color="#30363d" stop-opacity="0"/>
+      <stop offset="0" stop-color="#e0a458"/>
+      <stop offset="0.55" stop-color="#7a5a33"/>
+      <stop offset="1" stop-color="#7a5a33" stop-opacity="0"/>
     </linearGradient>
     <radialGradient id="dvGlow" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#e0a458" stop-opacity="0.4"/>
-      <stop offset="1" stop-color="#e0a458" stop-opacity="0"/>
+      <stop offset="0" stop-color="#e8963f" stop-opacity="0.5"/>
+      <stop offset="0.6" stop-color="#e0632f" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#e0632f" stop-opacity="0"/>
     </radialGradient>
   </defs>
   <style>
-    .flameO { transform-box: fill-box; transform-origin: center bottom; animation: flick 1.1s ease-in-out infinite alternate; }
-    .flameI { transform-box: fill-box; transform-origin: center bottom; animation: flick 0.8s ease-in-out 0.2s infinite alternate-reverse; }
+    .flameO { transform-box: fill-box; transform-origin: center bottom; animation: flick 1.3s ease-in-out infinite alternate; }
+    .flameM { transform-box: fill-box; transform-origin: center bottom; animation: flick 0.9s ease-in-out 0.25s infinite alternate-reverse; }
+    .flameC { transform-box: fill-box; transform-origin: center bottom; animation: flick 0.7s ease-in-out 0.1s infinite alternate; }
     @keyframes flick {
-      from { transform: scaleY(1) scaleX(1); opacity: 0.85; }
-      to { transform: scaleY(1.18) scaleX(0.92); opacity: 1; }
+      from { transform: scaleY(1) scaleX(1) rotate(-1.5deg); }
+      to { transform: scaleY(1.16) scaleX(0.94) rotate(1.5deg); }
     }
-    .glowP { transform-box: fill-box; transform-origin: center; animation: gp 2.6s ease-in-out infinite; }
-    @keyframes gp { 0%,100% { transform: scale(1); opacity: 0.8; } 50% { transform: scale(1.25); opacity: 1; } }
-    .spark { animation: sprise ease-in infinite; }
+    .glowP { transform-box: fill-box; transform-origin: center; animation: gp 3s ease-in-out infinite; }
+    @keyframes gp { 0%,100% { transform: scale(1); opacity: 0.85; } 50% { transform: scale(1.22); opacity: 1; } }
+    .spark { animation: sprise ease-in infinite; opacity: 0; }
     @keyframes sprise {
-      0% { transform: translateY(0); opacity: 0; }
-      15% { opacity: 0.9; }
-      100% { transform: translateY(-24px); opacity: 0; }
+      0% { transform: translate(0, 0); opacity: 0; }
+      15% { opacity: 0.95; }
+      100% { transform: translate(var(--dx, 4px), -34px); opacity: 0; }
     }
-    .sp1 { animation-duration: 2.2s; }
-    .sp2 { animation-duration: 3s; animation-delay: 1.1s; }
+    .sp1 { animation-duration: 2.4s; --dx: 6px; }
+    .sp2 { animation-duration: 3.2s; animation-delay: 1s; --dx: -7px; }
+    .sp3 { animation-duration: 2.8s; animation-delay: 1.9s; --dx: 3px; }
+    .gem { transform-box: fill-box; transform-origin: center; animation: gemPulse 4s ease-in-out infinite; }
+    .g2 { animation-delay: 2s; }
+    @keyframes gemPulse { 0%,100% { opacity: 0.55; } 50% { opacity: 1; } }
+    .rail { transform-box: fill-box; animation: railIn 1.4s cubic-bezier(0.22,1,0.36,1) both; }
+    .railL { transform-origin: right center; }
+    .railR { transform-origin: left center; }
+    @keyframes railIn { from { transform: scaleX(0); } to { transform: scaleX(1); } }
   </style>
 
-  <rect x="0" y="27" width="415" height="1.5" rx="0.75" fill="url(#dvL)"/>
-  <rect x="485" y="27" width="415" height="1.5" rx="0.75" fill="url(#dvR)"/>
+  <rect class="rail railL" x="30" y="43" width="368" height="2" rx="1" fill="url(#dvL)"/>
+  <rect class="rail railR" x="502" y="43" width="368" height="2" rx="1" fill="url(#dvR)"/>
+  <rect class="rail railL" x="120" y="49" width="278" height="1" rx="0.5" fill="url(#dvL)" opacity="0.4"/>
+  <rect class="rail railR" x="502" y="49" width="278" height="1" rx="0.5" fill="url(#dvR)" opacity="0.4"/>
 
-  <circle class="glowP" cx="450" cy="24" r="20" fill="url(#dvGlow)"/>
-  <path class="flameO" d="M450 8 C457 15 459 22 450 32 C441 22 443 15 450 8" fill="#e0a458" opacity="0.55"/>
-  <path class="flameI" d="M450 15 C454 19 455 24 450 30 C445 24 446 19 450 15" fill="#e63946"/>
-  <circle cx="450" cy="27" r="1.6" fill="#ffe9c9"/>
+  <rect class="gem" x="245" y="39" width="10" height="10" fill="none" stroke="#a08858" stroke-width="1.8" transform="rotate(45 250 44)"/>
+  <rect class="gem g2" x="645" y="39" width="10" height="10" fill="none" stroke="#a08858" stroke-width="1.8" transform="rotate(45 650 44)"/>
 
-  <g transform="translate(444,16)"><circle class="spark sp1" r="1.2" fill="#e0a458"/></g>
-  <g transform="translate(457,14)"><circle class="spark sp2" r="1" fill="#e63946"/></g>
+  <circle class="glowP" cx="450" cy="38" r="30" fill="url(#dvGlow)"/>
 
-  <rect x="429" y="35" width="42" height="2" rx="1" fill="#30363d"/>
+  <path d="M436 58 L464 58 L460 64 L440 64 Z" fill="#5a4a30"/>
+  <rect x="441" y="55" width="18" height="3" rx="1" fill="#6d5a3a"/>
+
+  <path class="flameO" d="M450 12 C459 22 462 33 458 44 C456 50 453 54 450 55 C447 54 444 50 442 44 C438 33 441 22 450 12" fill="#e8963f" opacity="0.6"/>
+  <path class="flameM" d="M450 22 C456 29 458 37 455 45 C453 50 451 53 450 53 C449 53 447 50 445 45 C442 37 444 29 450 22" fill="#e0632f" opacity="0.9"/>
+  <path class="flameC" d="M450 33 C453 37 454 43 452 48 C451 51 450 52 450 52 C450 52 449 51 448 48 C446 43 447 37 450 33" fill="#ffe9c2"/>
+
+  <g transform="translate(444,30)"><circle class="spark sp1" r="1.4" fill="#e8963f"/></g>
+  <g transform="translate(456,26)"><circle class="spark sp2" r="1.1" fill="#e0a458"/></g>
+  <g transform="translate(450,22)"><circle class="spark sp3" r="1.2" fill="#e0632f"/></g>
 </svg>
