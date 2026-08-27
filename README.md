@@ -77,8 +77,8 @@
   <br/><br/>
   <img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/hanko.svg" alt="Seal" width="84"/>
   <br/>
-  <i>「迷えば、敗れる」&nbsp;—&nbsp;Hesitation is defeat.</i>
-  <br/><br/>
+  <img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/quote.svg" alt="Hesitation is defeat." width="700"/>
+  <br/>
 </div>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:e63946,50:8b2635,100:e0a458&height=110&section=footer" width="100%" alt=""/>
