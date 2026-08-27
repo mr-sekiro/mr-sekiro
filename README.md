@@ -9,7 +9,7 @@
 <br/>
 
 <div align="center">
-  <a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/bossfile.svg?v=2" alt="Boss file: Abdullah Hussein" width="100%"/></a>
+  <a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/bossfile.svg?v=3" alt="Boss file: Abdullah Hussein" width="100%"/></a>
 </div>
 
 <br/>

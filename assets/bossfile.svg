@@ -82,7 +82,7 @@
     <text x="64" y="288" font-family="'Cascadia Code', Consolas, 'Courier New', monospace" font-size="12" letter-spacing="3" fill="#a08858">STATUS</text>
     <line x1="180" y1="284" x2="330" y2="284" stroke="#a08858" stroke-width="1.5" stroke-dasharray="1.5 6" opacity="0.4"/>
     <circle class="live" cx="356" cy="283" r="4" fill="#e0a458"/>
-    <text x="370" y="288" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="1" fill="#e0a458">SHIPPING IN PRODUCTION</text>
+    <text x="370" y="288" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="1" fill="#e0a458">ACTIVE&#160;&#160;·&#160;&#160;FORGING THE NEXT BOSS</text>
   </g>
 
   <g class="frame">
