@@ -51,7 +51,7 @@
 <br/>
 
 <div align="center">
-  <a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/output/stats.svg?v=2" alt="GitHub statistics" width="100%"/></a>
+  <a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/output/stats.svg?v=3" alt="GitHub statistics" width="100%"/></a>
 </div>
 
 <br/>

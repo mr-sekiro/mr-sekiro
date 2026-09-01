@@ -19,7 +19,7 @@ SANS = "'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif"
 MONO = "'Cascadia Code', Consolas, 'Courier New', monospace"
 SERIF_J = "'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif"
 
-LANG_COLORS = ["#e63946", "#b3242c", "#e0a458", "#a08858", "#8b949e", "#5c6570"]
+LANG_COLORS = ["#e63946", "#e0a458", "#b3242c", "#a08858", "#8b949e", "#5c6570"]
 
 
 def gql(query, variables=None):
@@ -162,7 +162,7 @@ def fmt(n):
 
 
 def render(s):
-    W, H = 1000, 505
+    W, H = 1000, 560
     p = []
     A = p.append
     A(f'<svg width="{W}" height="{H}" viewBox="0 0 {W} {H}" fill="none" xmlns="http://www.w3.org/2000/svg">')
@@ -191,8 +191,8 @@ def render(s):
     A("""<style>
     .rod { transform-box: fill-box; transform-origin: center; transform: scaleX(0); animation: rodIn 0.55s cubic-bezier(0.22,1,0.36,1) 0.1s forwards; }
     @keyframes rodIn { to { transform: scaleX(1); } }
-    .drop { transform: translateY(-190px); animation: bDrop 0.9s cubic-bezier(0.33,1,0.68,1) forwards; }
-    @keyframes bDrop { 0% { transform: translateY(-190px); } 72% { transform: translateY(5px); } 100% { transform: translateY(0); } }
+    .drop { transform: translateY(-225px); animation: bDrop 0.95s cubic-bezier(0.33,1,0.68,1) forwards; }
+    @keyframes bDrop { 0% { transform: translateY(-225px); } 72% { transform: translateY(5px); } 100% { transform: translateY(0); } }
     .fade { opacity: 0; animation: fIn 0.8s ease-out forwards; }
     @keyframes fIn { to { opacity: 1; } }
     .seg { transform-box: fill-box; transform-origin: left center; transform: scaleX(0); animation: sIn 1s cubic-bezier(0.22,1,0.36,1) forwards; }
@@ -218,13 +218,13 @@ def render(s):
   </style>""")
     A('<g clip-path="url(#stFrame)">')
     A(f'<rect width="{W}" height="{H}" fill="url(#stPanel)"/>')
-    A(f'<path d="M0 465 L140 435 L300 459 L500 431 L690 457 L850 437 L1000 455 L1000 {H} L0 {H} Z" fill="#0d1119"/>')
-    A('<g class="mist1" filter="url(#stMist)"><ellipse cx="280" cy="455" rx="220" ry="20" fill="#8b949e" opacity="0.05"/></g>')
-    A('<g class="mist2" filter="url(#stMist)"><ellipse cx="720" cy="475" rx="240" ry="22" fill="#8b949e" opacity="0.04"/></g>')
-    A(f'<text x="{W-14}" y="120" text-anchor="end" font-family="{SERIF_J}" font-size="140" font-weight="700" fill="#e63946" opacity="0.035">数</text>')
+    A(f'<path d="M0 520 L140 490 L300 514 L500 486 L690 512 L850 492 L1000 510 L1000 {H} L0 {H} Z" fill="#0d1119"/>')
+    A('<g class="mist1" filter="url(#stMist)"><ellipse cx="280" cy="510" rx="220" ry="20" fill="#8b949e" opacity="0.05"/></g>')
+    A('<g class="mist2" filter="url(#stMist)"><ellipse cx="720" cy="530" rx="240" ry="22" fill="#8b949e" opacity="0.04"/></g>')
+    A(f'<text x="{W-14}" y="130" text-anchor="end" font-family="{SERIF_J}" font-size="140" font-weight="700" fill="#e63946" opacity="0.035">数</text>')
 
-    for cls, x, y, col in [("em1", 150, 487, "#e63946"), ("em2", 420, 493, "#e0a458"),
-                           ("em3", 640, 490, "#e63946"), ("em4", 880, 487, "#e0a458")]:
+    for cls, x, y, col in [("em1", 150, 542, "#e63946"), ("em2", 420, 548, "#e0a458"),
+                           ("em3", 640, 545, "#e63946"), ("em4", 880, 542, "#e0a458")]:
         A(f'<g transform="translate({x},{y})"><circle class="ember {cls}" r="1.7" fill="{col}"/></g>')
 
     banners = [
@@ -235,82 +235,91 @@ def render(s):
         (fmt(s["followers"]), "FOLLOWERS"),
         (fmt(s["contributed"]), "CONTRIBUTED TO"),
     ]
-    xs = [110, 266, 422, 578, 734, 890]
-    rod_y = 40
+    kanji = ["業", "星", "統", "題", "衆", "縁"]
+    xs = [94, 256, 419, 581, 744, 906]
+    rod_y = 46
     for i, x in enumerate(xs):
-        A(f'<rect x="{x-30}" y="{rod_y-6}" width="9" height="14" rx="2" fill="#2a2117"/>')
-        A(f'<rect x="{x+21}" y="{rod_y-6}" width="9" height="14" rx="2" fill="#2a2117"/>')
-    A(f'<rect class="rod" x="36" y="{rod_y-2}" width="928" height="4" rx="2" fill="#6d5a3a"/>')
-    A(f'<rect x="26" y="{rod_y-5}" width="10" height="10" fill="#161b22" stroke="#a08858" stroke-width="1.6" transform="rotate(45 31 {rod_y})"/>')
-    A(f'<rect x="964" y="{rod_y-5}" width="10" height="10" fill="#161b22" stroke="#a08858" stroke-width="1.6" transform="rotate(45 969 {rod_y})"/>')
+        A(f'<rect x="{x-45}" y="{rod_y-7}" width="11" height="16" rx="2.5" fill="#2a2117"/>')
+        A(f'<rect x="{x+34}" y="{rod_y-7}" width="11" height="16" rx="2.5" fill="#2a2117"/>')
+    A(f'<rect class="rod" x="30" y="{rod_y-2.5}" width="940" height="5" rx="2.5" fill="#6d5a3a"/>')
+    A(f'<rect x="18" y="{rod_y-6}" width="12" height="12" fill="#161b22" stroke="#a08858" stroke-width="1.6" transform="rotate(45 24 {rod_y})"/>')
+    A(f'<rect x="970" y="{rod_y-6}" width="12" height="12" fill="#161b22" stroke="#a08858" stroke-width="1.6" transform="rotate(45 976 {rod_y})"/>')
     for i, ((val, label), x) in enumerate(zip(banners, xs)):
         d = 0.55 + i * 0.12
-        A(f'<clipPath id="bnc{i}"><rect x="{x-52}" y="{rod_y+3}" width="104" height="214"/></clipPath>')
+        A(f'<clipPath id="bnc{i}"><rect x="{x-78}" y="{rod_y+3}" width="156" height="222"/></clipPath>')
         A(f'<g clip-path="url(#bnc{i})"><g class="drop" style="animation-delay:{d:.2f}s">')
-        A(f'<path d="M{x-46} {rod_y+4} H {x+46} V 192 L {x} 212 L {x-46} 192 Z" fill="#12151d" stroke="#6d5a3a" stroke-width="1.5"/>')
-        A(f'<rect x="{x-46}" y="{rod_y+4}" width="92" height="27" fill="#b3242c"/>')
-        A(f'<rect x="{x-4.5}" y="{rod_y+13}" width="9" height="9" fill="none" stroke="#ffd9a0" stroke-width="1.6" transform="rotate(45 {x} {rod_y+17.5})"/>')
-        A(f'<path d="M{x-40} {rod_y+37} H {x+40} V 187 L {x} 204 L {x-40} 187 Z" fill="none" stroke="#a08858" stroke-width="0.8" opacity="0.3"/>')
-        fs = 23 if len(val) < 5 else 19.5
-        A(f'<text x="{x}" y="126" text-anchor="middle" font-family="{SANS}" font-size="{fs}" font-weight="800" fill="#f1f5f9">{val}</text>')
-        A(f'<text x="{x}" y="168" text-anchor="middle" font-family="{MONO}" font-size="9" letter-spacing="1" fill="#a08858">{label}</text>')
+        A(f'<path d="M{x-72} {rod_y+4} H {x+72} V 234 L {x} 258 L {x-72} 234 Z" fill="#12151d" stroke="#6d5a3a" stroke-width="1.5"/>')
+        A(f'<rect x="{x-72}" y="{rod_y+4}" width="144" height="32" fill="#c9252f"/>')
+        A(f'<rect x="{x-72}" y="{rod_y+34}" width="144" height="2" fill="#8f1e24"/>')
+        A(f'<rect x="{x-6}" y="{rod_y+14}" width="12" height="12" fill="none" stroke="#ffd9a0" stroke-width="1.8" transform="rotate(45 {x} {rod_y+20})"/>')
+        A(f'<rect x="{x-2.5}" y="{rod_y+17.5}" width="5" height="5" fill="#ffd9a0" transform="rotate(45 {x} {rod_y+20})"/>')
+        A(f'<path d="M{x-65} {rod_y+43} H {x+65} V 229 L {x} 250 L {x-65} 229 Z" fill="none" stroke="#a08858" stroke-width="0.8" opacity="0.3"/>')
+        fs = 38 if len(val) < 5 else 33
+        A(f'<text x="{x}" y="152" text-anchor="middle" font-family="{SANS}" font-size="{fs}" font-weight="800" fill="#ffffff">{val}</text>')
+        A(f'<rect x="{x-14}" y="167" width="28" height="1.5" fill="#a08858" opacity="0.55"/>')
+        A(f'<text x="{x}" y="198" text-anchor="middle" font-family="{MONO}" font-size="11.5" letter-spacing="1.2" fill="#d8b781">{label}</text>')
+        A(f'<text x="{x}" y="228" text-anchor="middle" font-family="{SERIF_J}" font-size="14" fill="#e0a458" opacity="0.55">{kanji[i]}</text>')
         A('</g></g>')
 
-    fy = 288
-    A(f'<rect x="499" y="{fy-46}" width="1.5" height="108" fill="url(#vRule)"/>')
+    fy = 330
+    A(f'<rect x="499" y="{fy-44}" width="1.5" height="96" fill="url(#vRule)"/>')
 
-    fx = 218
+    fx = 170
+    A(f'<g transform="translate({fx} {fy-8}) scale(1.3) translate({-fx} {-(fy-8)})">')
     A(f'<circle class="glow" cx="{fx}" cy="{fy-8}" r="30" fill="url(#stFlameGlow)"/>')
     A(f'<path class="flameO" d="M{fx} {fy-32} C{fx+9} {fy-21} {fx+12} {fy-11} {fx+8} {fy-1} C{fx+5} {fy+6} {fx+2} {fy+10} {fx} {fy+10} C{fx-2} {fy+10} {fx-5} {fy+6} {fx-8} {fy-1} C{fx-12} {fy-11} {fx-9} {fy-21} {fx} {fy-32}" fill="#e8963f" opacity="0.65"/>')
     A(f'<path class="flameM" d="M{fx} {fy-22} C{fx+6} {fy-14} {fx+7} {fy-6} {fx+4} {fy+2} C{fx+2} {fy+7} {fx} {fy+9} {fx} {fy+9} C{fx} {fy+9} {fx-2} {fy+7} {fx-4} {fy+2} C{fx-7} {fy-6} {fx-6} {fy-14} {fx} {fy-22}" fill="#e0632f"/>')
     A(f'<path class="flameI" d="M{fx} {fy-12} C{fx+3} {fy-7} {fx+4} {fy-1} {fx+2} {fy+4} C{fx+1} {fy+7} {fx} {fy+8} {fx} {fy+8} C{fx} {fy+8} {fx-1} {fy+7} {fx-2} {fy+4} C{fx-4} {fy-1} {fx-3} {fy-7} {fx} {fy-12}" fill="#ffe9c2"/>')
-    A('<g class="fade" style="animation-delay:1.2s">')
-    A(f'<text x="{fx+42}" y="{fy-2}" font-family="{SANS}" font-size="44" font-weight="800" fill="url(#numGrad)">{s["cur_streak"]}<tspan font-size="15" font-weight="600" fill="#c9d1d9" dx="8">DAY STREAK</tspan></text>')
-    A(f'<text x="{fx+44}" y="{fy+28}" font-family="{MONO}" font-size="11.5" letter-spacing="2" fill="#e0a458">LONGEST&#160;&#160;·&#160;&#160;{s["longest_streak"]} DAYS</text>')
     A('</g>')
-    A(f'<g class="fade" style="animation-delay:1.35s"><text x="{fx-36}" y="{fy+28}" font-family="{MONO}" font-size="10" letter-spacing="2.5" fill="#a08858">回生</text></g>')
+    A('<g class="fade" style="animation-delay:1.2s">')
+    A(f'<text x="{fx+56}" y="{fy}" font-family="{SANS}" font-size="52" font-weight="800" fill="url(#numGrad)">{s["cur_streak"]}<tspan font-size="16.5" font-weight="600" fill="#e8edf3" dx="10">DAY STREAK</tspan></text>')
+    A(f'<text x="{fx+58}" y="{fy+32}" font-family="{MONO}" font-size="12.5" letter-spacing="2" fill="#e0a458">LONGEST&#160;&#160;·&#160;&#160;{s["longest_streak"]} DAYS</text>')
+    A('</g>')
+    A(f'<g class="fade" style="animation-delay:1.35s"><text x="{fx-52}" y="{fy+34}" font-family="{MONO}" font-size="11" letter-spacing="2.5" fill="#a08858">回生</text></g>')
 
-    cx0 = 590
+    cx0 = 575
     A('<g class="coin">')
-    A(f'<circle cx="{cx0}" cy="{fy-6}" r="26" fill="url(#coinGrad)"/>')
-    A(f'<circle cx="{cx0}" cy="{fy-6}" r="26" fill="none" stroke="#8a7040" stroke-width="2"/>')
-    A(f'<circle cx="{cx0}" cy="{fy-6}" r="21" fill="none" stroke="#8a7040" stroke-width="0.8" opacity="0.6"/>')
-    A(f'<rect x="{cx0-7}" y="{fy-13}" width="14" height="14" fill="#0e1219"/>')
+    A(f'<circle cx="{cx0}" cy="{fy-8}" r="30" fill="url(#coinGrad)"/>')
+    A(f'<circle cx="{cx0}" cy="{fy-8}" r="30" fill="none" stroke="#8a7040" stroke-width="2.2"/>')
+    A(f'<circle cx="{cx0}" cy="{fy-8}" r="24" fill="none" stroke="#8a7040" stroke-width="0.9" opacity="0.6"/>')
+    A(f'<rect x="{cx0-8}" y="{fy-16}" width="16" height="16" fill="#0e1219"/>')
     A('</g>')
     A('<g class="fade" style="animation-delay:1.5s">')
-    A(f'<text x="{cx0+44}" y="{fy-2}" font-family="{SANS}" font-size="40" font-weight="800" fill="#e0a458">{fmt(s["total_contrib"])}<tspan font-size="14" font-weight="600" fill="#c9d1d9" dx="8">CONTRIBUTIONS</tspan></text>')
-    A(f'<text x="{cx0+46}" y="{fy+28}" font-family="{MONO}" font-size="11.5" letter-spacing="2" fill="#8b949e">SINCE {s["since"]}&#160;&#160;·&#160;&#160;総貢献</text>')
+    A(f'<text x="{cx0+50}" y="{fy}" font-family="{SANS}" font-size="46" font-weight="800" fill="#e0a458">{fmt(s["total_contrib"])}<tspan font-size="15.5" font-weight="600" fill="#e8edf3" dx="10">CONTRIBUTIONS</tspan></text>')
+    A(f'<text x="{cx0+52}" y="{fy+32}" font-family="{MONO}" font-size="12.5" letter-spacing="2" fill="#8b949e">SINCE {s["since"]}&#160;&#160;·&#160;&#160;総貢献</text>')
     A('</g>')
 
-    ly = 400
+    ly = 436
     A('<g class="fade" style="animation-delay:1.1s">')
-    A(f'<text x="56" y="{ly}" font-family="{MONO}" font-size="12" letter-spacing="3" fill="#a08858">TOP LANGUAGES&#160;&#160;<tspan font-family="{SERIF_J}" fill="#e63946" opacity="0.8">言語</tspan></text>')
-    A(f'<text x="944" y="{ly}" text-anchor="end" font-family="{MONO}" font-size="10" letter-spacing="2" fill="#8b949e" opacity="0.6">BY CODE VOLUME</text>')
+    A(f'<text x="56" y="{ly}" font-family="{MONO}" font-size="13" letter-spacing="3" fill="#d8b781">TOP LANGUAGES&#160;&#160;<tspan font-family="{SERIF_J}" fill="#e63946" opacity="0.8">言語</tspan></text>')
+    A(f'<text x="944" y="{ly}" text-anchor="end" font-family="{MONO}" font-size="10.5" letter-spacing="2" fill="#8b949e" opacity="0.7">BY CODE VOLUME</text>')
     A('</g>')
-    bx, bw, bh, by = 56, 888, 15, ly + 14
+    bx, bw, bh, by = 56, 888, 17, ly + 16
     A(f'<rect x="{bx-3}" y="{by-3}" width="{bw+6}" height="{bh+6}" rx="3" fill="#150b0c" stroke="#6d5a3a" stroke-width="1.5"/>')
     cx = bx
+    n_seg = len(s["langs"])
     for i, (name, pct) in enumerate(s["langs"]):
-        wseg = max(3.0, bw * pct)
+        wseg = max(4.0, bw * pct)
         color = LANG_COLORS[i % len(LANG_COLORS)]
-        A(f'<rect class="seg" style="animation-delay:{1.2 + i*0.15:.2f}s" x="{cx:.1f}" y="{by}" width="{wseg:.1f}" height="{bh}" fill="{color}"/>')
+        draw_w = wseg - (2 if i < n_seg - 1 else 0)
+        A(f'<rect class="seg" style="animation-delay:{1.2 + i*0.15:.2f}s" x="{cx:.1f}" y="{by}" width="{draw_w:.1f}" height="{bh}" fill="{color}"/>')
         cx += wseg
     A(f'<rect x="{bx}" y="{by}" width="{bw}" height="4" fill="#ffffff" opacity="0.08"/>')
     A(f'<rect x="{bx-8}" y="{by+bh/2-4}" width="8" height="8" fill="none" stroke="#a08858" stroke-width="1.6" transform="rotate(45 {bx-4} {by+bh/2})"/>')
     A(f'<rect x="{bx+bw}" y="{by+bh/2-4}" width="8" height="8" fill="none" stroke="#a08858" stroke-width="1.6" transform="rotate(45 {bx+bw+4} {by+bh/2})"/>')
     lx = 56
-    lyy = by + 44
+    lyy = by + 48
     for i, (name, pct) in enumerate(s["langs"]):
         color = LANG_COLORS[i % len(LANG_COLORS)]
         label = f"{name}&#160;{pct*100:.1f}%"
         A(f'<g class="fade" style="animation-delay:{1.5 + i*0.12:.2f}s">')
-        A(f'<rect x="{lx}" y="{lyy-9}" width="9" height="9" fill="{color}"/>')
-        A(f'<text x="{lx+16}" y="{lyy}" font-family="{SANS}" font-size="12.5" fill="#c9d1d9">{label}</text>')
+        A(f'<rect x="{lx}" y="{lyy-10}" width="10" height="10" fill="{color}"/>')
+        A(f'<text x="{lx+18}" y="{lyy}" font-family="{SANS}" font-size="13.5" fill="#c9d1d9">{label}</text>')
         A('</g>')
-        lx += 26 + 8 * (len(name) + 6)
+        lx += 30 + 8.6 * (len(name) + 6)
 
-    A(f'<circle class="db" cx="62" cy="{H-22}" r="4" fill="#ff4653"/>')
-    A(f'<text class="fade" style="animation-delay:1.9s" x="944" y="{H-18}" text-anchor="end" font-family="{MONO}" font-size="10" letter-spacing="2" fill="#a08858" opacity="0.5">LAST SYNC · {s["sync"]}</text>')
+    A(f'<circle class="db" cx="62" cy="{H-24}" r="4" fill="#ff4653"/>')
+    A(f'<text class="fade" style="animation-delay:1.9s" x="944" y="{H-20}" text-anchor="end" font-family="{MONO}" font-size="10.5" letter-spacing="2" fill="#a08858" opacity="0.6">LAST SYNC · {s["sync"]}</text>')
     A('</g>')
     A(f'<rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="14" stroke="#21262d"/>')
     A('</svg>')
