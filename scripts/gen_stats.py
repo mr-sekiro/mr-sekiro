@@ -162,106 +162,159 @@ def fmt(n):
 
 
 def render(s):
-    W, H = 1000, 430
+    W, H = 1000, 470
     p = []
     A = p.append
     A(f'<svg width="{W}" height="{H}" viewBox="0 0 {W} {H}" fill="none" xmlns="http://www.w3.org/2000/svg">')
-    A(f'''<defs>
-    <linearGradient id="stPanel" x1="0" y1="0" x2="{W}" y2="{H}" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#0b0e14"/><stop offset="0.5" stop-color="#0e1219"/><stop offset="1" stop-color="#0b0e14"/>
+    A(f"""<defs>
+    <linearGradient id="stPanel" x1="0" y1="0" x2="0" y2="{H}" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0b0e14"/><stop offset="0.6" stop-color="#0e1219"/><stop offset="1" stop-color="#0b0e14"/>
+    </linearGradient>
+    <linearGradient id="numGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e63946"/><stop offset="1" stop-color="#e0a458"/>
     </linearGradient>
     <radialGradient id="stFlameGlow" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#e8963f" stop-opacity="0.45"/><stop offset="1" stop-color="#e0632f" stop-opacity="0"/>
+      <stop offset="0" stop-color="#e8963f" stop-opacity="0.5"/><stop offset="1" stop-color="#e0632f" stop-opacity="0"/>
     </radialGradient>
-  </defs>''')
-    A('''<style>
-    .tile { transform-box: fill-box; transform-origin: center; transform: scale(0.85); opacity: 0; animation: tIn 0.6s cubic-bezier(0.34,1.56,0.64,1) forwards; }
-    @keyframes tIn { to { transform: scale(1); opacity: 1; } }
-    .seg { transform-box: fill-box; transform-origin: left center; transform: scaleX(0); animation: sIn 1s cubic-bezier(0.22,1,0.36,1) forwards; }
-    @keyframes sIn { to { transform: scaleX(1); } }
+    <radialGradient id="beadGrad" cx="0.5" cy="0.38" r="0.75">
+      <stop offset="0" stop-color="#181f2b"/><stop offset="1" stop-color="#0d1117"/>
+    </radialGradient>
+    <linearGradient id="coinGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e8c983"/><stop offset="1" stop-color="#b9954e"/>
+    </linearGradient>
+    <linearGradient id="vRule" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#30363d" stop-opacity="0"/><stop offset="0.5" stop-color="#30363d"/><stop offset="1" stop-color="#30363d" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="stMist" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="14"/></filter>
+    <clipPath id="stFrame"><rect width="{W}" height="{H}" rx="14"/></clipPath>
+  </defs>""")
+    A("""<style>
+    .cord { stroke-dasharray: 1100; stroke-dashoffset: 1100; animation: cordDraw 1.6s cubic-bezier(0.4,0,0.2,1) 0.2s forwards; }
+    @keyframes cordDraw { to { stroke-dashoffset: 0; } }
+    .bead { transform-box: fill-box; transform-origin: center; transform: scale(0); animation: bIn 0.55s cubic-bezier(0.34,1.56,0.64,1) forwards; }
+    @keyframes bIn { to { transform: scale(1); } }
     .fade { opacity: 0; animation: fIn 0.8s ease-out forwards; }
     @keyframes fIn { to { opacity: 1; } }
+    .seg { transform-box: fill-box; transform-origin: left center; transform: scaleX(0); animation: sIn 1s cubic-bezier(0.22,1,0.36,1) forwards; }
+    @keyframes sIn { to { transform: scaleX(1); } }
     .flameO { transform-box: fill-box; transform-origin: center bottom; animation: flick 1.2s ease-in-out infinite alternate; }
-    .flameI { transform-box: fill-box; transform-origin: center bottom; animation: flick 0.85s ease-in-out 0.2s infinite alternate-reverse; }
-    @keyframes flick { from { transform: scaleY(1) rotate(-2deg); } to { transform: scaleY(1.18) scaleX(0.93) rotate(2deg); } }
+    .flameM { transform-box: fill-box; transform-origin: center bottom; animation: flick 0.9s ease-in-out 0.22s infinite alternate-reverse; }
+    .flameI { transform-box: fill-box; transform-origin: center bottom; animation: flick 0.7s ease-in-out 0.1s infinite alternate; }
+    @keyframes flick { from { transform: scaleY(1) rotate(-2deg); } to { transform: scaleY(1.15) scaleX(0.94) rotate(2deg); } }
     .glow { transform-box: fill-box; transform-origin: center; animation: gp 3s ease-in-out infinite; }
     @keyframes gp { 0%,100% { transform: scale(1); opacity: 0.8; } 50% { transform: scale(1.25); opacity: 1; } }
     .db { transform-box: fill-box; transform-origin: center; animation: dbp 2.4s ease-in-out infinite; }
     @keyframes dbp { 0%,100% { transform: scale(1); opacity: 0.8; } 50% { transform: scale(1.3); opacity: 1; } }
-    .big { animation: fIn 1s ease-out 0.9s both; }
-  </style>''')
-    A(f'<rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="14" fill="url(#stPanel)" stroke="#21262d"/>')
-    A(f'<text x="{W-12}" y="{H-14}" text-anchor="end" font-family="{SERIF_J}" font-size="150" font-weight="700" fill="#e63946" opacity="0.03">数</text>')
+    .mist1 { animation: drift 28s ease-in-out infinite alternate; }
+    .mist2 { animation: drift 36s ease-in-out infinite alternate-reverse; }
+    @keyframes drift { from { transform: translateX(-45px); } to { transform: translateX(60px); } }
+    .ember { animation: rise ease-in infinite; opacity: 0; }
+    @keyframes rise { 0% { transform: translateY(0); opacity: 0; } 12% { opacity: 0.85; } 100% { transform: translateY(-110px); opacity: 0; } }
+    .em1 { animation-duration: 6s; } .em2 { animation-duration: 7.5s; animation-delay: 2.4s; }
+    .em3 { animation-duration: 5.5s; animation-delay: 4s; } .em4 { animation-duration: 8s; animation-delay: 1.2s; }
+    .coin { transform-box: fill-box; transform-origin: center; animation: coinIn 0.7s cubic-bezier(0.34,1.56,0.64,1) 1.5s both, coinSpin 9s linear 2.5s infinite; }
+    @keyframes coinIn { from { transform: scale(0) rotate(-120deg); opacity: 0; } to { transform: scale(1) rotate(0deg); opacity: 1; } }
+    @keyframes coinSpin { 0%,82% { transform: rotate(0deg); } 92% { transform: rotate(180deg); } 100% { transform: rotate(360deg); } }
+  </style>""")
+    A('<g clip-path="url(#stFrame)">')
+    A(f'<rect width="{W}" height="{H}" fill="url(#stPanel)"/>')
+    A(f'<path d="M0 430 L140 400 L300 424 L500 396 L690 422 L850 402 L1000 420 L1000 {H} L0 {H} Z" fill="#0d1119"/>')
+    A('<g class="mist1" filter="url(#stMist)"><ellipse cx="280" cy="420" rx="220" ry="20" fill="#8b949e" opacity="0.05"/></g>')
+    A('<g class="mist2" filter="url(#stMist)"><ellipse cx="720" cy="440" rx="240" ry="22" fill="#8b949e" opacity="0.04"/></g>')
+    A(f'<text x="{W-14}" y="120" text-anchor="end" font-family="{SERIF_J}" font-size="140" font-weight="700" fill="#e63946" opacity="0.035">数</text>')
 
-    tiles = [
-        ("COMMITS · ALL TIME", fmt(s["commits"])),
-        ("STARS EARNED", fmt(s["stars"])),
-        ("PULL REQUESTS", fmt(s["prs"])),
-        ("ISSUES FILED", fmt(s["issues"])),
-        ("FOLLOWERS", fmt(s["followers"])),
-        ("CONTRIBUTED TO", fmt(s["contributed"])),
+    for cls, x, y, col in [("em1", 150, 452, "#e63946"), ("em2", 420, 458, "#e0a458"),
+                           ("em3", 640, 455, "#e63946"), ("em4", 880, 452, "#e0a458")]:
+        A(f'<g transform="translate({x},{y})"><circle class="ember {cls}" r="1.7" fill="{col}"/></g>')
+
+    beads = [
+        (fmt(s["commits"]), "COMMITS"),
+        (fmt(s["stars"]), "STARS"),
+        (fmt(s["prs"]), "PULL REQUESTS"),
+        (fmt(s["issues"]), "ISSUES"),
+        (fmt(s["followers"]), "FOLLOWERS"),
+        (fmt(s["contributed"]), "CONTRIBUTED TO"),
     ]
-    tw, th, gx, gy, x0, y0 = 184, 74, 14, 16, 56, 46
-    for i, (label, val) in enumerate(tiles):
-        cx = x0 + (i % 3) * (tw + gx)
-        cy = y0 + (i // 3) * (th + gy)
-        d = 0.15 + i * 0.1
-        A(f'<g class="tile" style="animation-delay:{d:.2f}s">')
-        A(f'<rect x="{cx}" y="{cy}" width="{tw}" height="{th}" rx="4" fill="#10141c" stroke="#6d5a3a" stroke-width="1.5"/>')
-        A(f'<rect x="{cx+4}" y="{cy+4}" width="{tw-8}" height="{th-8}" rx="2" fill="none" stroke="#a08858" stroke-width="0.8" opacity="0.35"/>')
-        A(f'<rect x="{cx+tw-13}" y="{cy+7}" width="6" height="6" fill="none" stroke="#a08858" stroke-width="1.4" transform="rotate(45 {cx+tw-10} {cy+10})"/>')
-        A(f'<text x="{cx+16}" y="{cy+34}" font-family="{SANS}" font-size="24" font-weight="700" fill="#f1f5f9">{val}</text>')
-        A(f'<text x="{cx+16}" y="{cy+56}" font-family="{MONO}" font-size="10" letter-spacing="2.5" fill="#a08858">{label}</text>')
+    xs = [110, 266, 422, 578, 734, 890]
+    dy = [0, 16, 25, 25, 16, 0]
+    ys = [72 + d for d in dy]
+    cord = f"M20 52 C 60 56, 85 {ys[0]-4} {xs[0]} {ys[0]}"
+    for i in range(1, 6):
+        mx = (xs[i-1] + xs[i]) / 2
+        my = max(ys[i-1], ys[i]) + 12
+        cord += f" Q {mx} {my} {xs[i]} {ys[i]}"
+    cord += f" C 915 {ys[5]-4}, 940 56, 980 52"
+    A(f'<path class="cord" d="{cord}" stroke="#6d5a3a" stroke-width="2" fill="none" opacity="0.8"/>')
+    for i, ((val, label), x, y) in enumerate(zip(beads, xs, ys)):
+        d = 0.35 + i * 0.13
+        A(f'<g class="bead" style="animation-delay:{d:.2f}s">')
+        A(f'<circle cx="{x}" cy="{y}" r="36" fill="url(#beadGrad)" stroke="#6d5a3a" stroke-width="2.5"/>')
+        A(f'<circle cx="{x}" cy="{y}" r="29" fill="none" stroke="#a08858" stroke-width="1" opacity="0.4"/>')
+        A(f'<rect x="{x-4}" y="{y-42}" width="8" height="8" fill="#10141c" stroke="#a08858" stroke-width="1.6" transform="rotate(45 {x} {y-38})"/>')
+        fs = 19 if len(val) < 5 else 16.5
+        A(f'<text x="{x}" y="{y+7}" text-anchor="middle" font-family="{SANS}" font-size="{fs}" font-weight="800" fill="#f1f5f9">{val}</text>')
+        A('</g>')
+        A(f'<g class="fade" style="animation-delay:{d+0.15:.2f}s">')
+        A(f'<text x="{x}" y="{y+62}" text-anchor="middle" font-family="{MONO}" font-size="10" letter-spacing="2.5" fill="#a08858">{label}</text>')
         A('</g>')
 
-    # streak shrine
-    sx, sy, sw, sh = 668, 46, 276, 164
-    A(f'<g class="tile" style="animation-delay:0.75s">')
-    A(f'<rect x="{sx}" y="{sy}" width="{sw}" height="{sh}" rx="4" fill="#10141c" stroke="#6d5a3a" stroke-width="1.5"/>')
-    A(f'<rect x="{sx+5}" y="{sy+5}" width="{sw-10}" height="{sh-10}" rx="2" fill="none" stroke="#a08858" stroke-width="0.8" opacity="0.35"/>')
-    fx, fy = sx + sw / 2, sy + 34
-    A(f'<circle class="glow" cx="{fx}" cy="{fy}" r="22" fill="url(#stFlameGlow)"/>')
-    A(f'<path class="flameO" d="M{fx} {fy-16} C{fx+7} {fy-8} {fx+9} {fy} {fx+6} {fy+8} C{fx+4} {fy+13} {fx+1} {fy+16} {fx} {fy+16} C{fx-1} {fy+16} {fx-4} {fy+13} {fx-6} {fy+8} C{fx-9} {fy} {fx-7} {fy-8} {fx} {fy-16}" fill="#e8963f" opacity="0.75"/>')
-    A(f'<path class="flameI" d="M{fx} {fy-7} C{fx+4} {fy-2} {fx+5} {fy+4} {fx+3} {fy+10} C{fx+2} {fy+13} {fx} {fy+14} {fx} {fy+14} C{fx} {fy+14} {fx-2} {fy+13} {fx-3} {fy+10} C{fx-5} {fy+4} {fx-4} {fy-2} {fx} {fy-7}" fill="#ffe9c2"/>')
-    A(f'<text x="{fx}" y="{sy+76}" text-anchor="middle" font-family="{MONO}" font-size="11" letter-spacing="3" fill="#a08858">CURRENT STREAK</text>')
-    A(f'<text class="big" x="{fx}" y="{sy+118}" text-anchor="middle" font-family="{SANS}" font-size="40" font-weight="800" fill="#e63946">{s["cur_streak"]}<tspan font-size="15" font-weight="600" fill="#c9d1d9">&#160;DAYS</tspan></text>')
-    A(f'<text x="{fx}" y="{sy+146}" text-anchor="middle" font-family="{MONO}" font-size="11" letter-spacing="2" fill="#e0a458">LONGEST&#160;&#160;·&#160;&#160;{s["longest_streak"]} DAYS</text>')
+    fy = 250
+    A(f'<rect x="499" y="{fy-46}" width="1.5" height="108" fill="url(#vRule)"/>')
+
+    fx = 218
+    A(f'<circle class="glow" cx="{fx}" cy="{fy-8}" r="30" fill="url(#stFlameGlow)"/>')
+    A(f'<path class="flameO" d="M{fx} {fy-32} C{fx+9} {fy-21} {fx+12} {fy-11} {fx+8} {fy-1} C{fx+5} {fy+6} {fx+2} {fy+10} {fx} {fy+10} C{fx-2} {fy+10} {fx-5} {fy+6} {fx-8} {fy-1} C{fx-12} {fy-11} {fx-9} {fy-21} {fx} {fy-32}" fill="#e8963f" opacity="0.65"/>')
+    A(f'<path class="flameM" d="M{fx} {fy-22} C{fx+6} {fy-14} {fx+7} {fy-6} {fx+4} {fy+2} C{fx+2} {fy+7} {fx} {fy+9} {fx} {fy+9} C{fx} {fy+9} {fx-2} {fy+7} {fx-4} {fy+2} C{fx-7} {fy-6} {fx-6} {fy-14} {fx} {fy-22}" fill="#e0632f"/>')
+    A(f'<path class="flameI" d="M{fx} {fy-12} C{fx+3} {fy-7} {fx+4} {fy-1} {fx+2} {fy+4} C{fx+1} {fy+7} {fx} {fy+8} {fx} {fy+8} C{fx} {fy+8} {fx-1} {fy+7} {fx-2} {fy+4} C{fx-4} {fy-1} {fx-3} {fy-7} {fx} {fy-12}" fill="#ffe9c2"/>')
+    A('<g class="fade" style="animation-delay:1.2s">')
+    A(f'<text x="{fx+42}" y="{fy-2}" font-family="{SANS}" font-size="44" font-weight="800" fill="url(#numGrad)">{s["cur_streak"]}<tspan font-size="15" font-weight="600" fill="#c9d1d9" dx="8">DAY STREAK</tspan></text>')
+    A(f'<text x="{fx+44}" y="{fy+28}" font-family="{MONO}" font-size="11.5" letter-spacing="2" fill="#e0a458">LONGEST&#160;&#160;·&#160;&#160;{s["longest_streak"]} DAYS</text>')
+    A('</g>')
+    A(f'<g class="fade" style="animation-delay:1.35s"><text x="{fx-36}" y="{fy+28}" font-family="{MONO}" font-size="10" letter-spacing="2.5" fill="#a08858">回生</text></g>')
+
+    cx0 = 590
+    A('<g class="coin">')
+    A(f'<circle cx="{cx0}" cy="{fy-6}" r="26" fill="url(#coinGrad)"/>')
+    A(f'<circle cx="{cx0}" cy="{fy-6}" r="26" fill="none" stroke="#8a7040" stroke-width="2"/>')
+    A(f'<circle cx="{cx0}" cy="{fy-6}" r="21" fill="none" stroke="#8a7040" stroke-width="0.8" opacity="0.6"/>')
+    A(f'<rect x="{cx0-7}" y="{fy-13}" width="14" height="14" fill="#0e1219"/>')
+    A('</g>')
+    A('<g class="fade" style="animation-delay:1.5s">')
+    A(f'<text x="{cx0+44}" y="{fy-2}" font-family="{SANS}" font-size="40" font-weight="800" fill="#e0a458">{fmt(s["total_contrib"])}<tspan font-size="14" font-weight="600" fill="#c9d1d9" dx="8">CONTRIBUTIONS</tspan></text>')
+    A(f'<text x="{cx0+46}" y="{fy+28}" font-family="{MONO}" font-size="11.5" letter-spacing="2" fill="#8b949e">SINCE {s["since"]}&#160;&#160;·&#160;&#160;総貢献</text>')
     A('</g>')
 
-    # languages vitality bar
-    ly = 258
-    A(f'<g class="fade" style="animation-delay:0.9s">')
+    ly = 352
+    A('<g class="fade" style="animation-delay:1.1s">')
     A(f'<text x="56" y="{ly}" font-family="{MONO}" font-size="12" letter-spacing="3" fill="#a08858">TOP LANGUAGES&#160;&#160;<tspan font-family="{SERIF_J}" fill="#e63946" opacity="0.8">言語</tspan></text>')
     A(f'<text x="944" y="{ly}" text-anchor="end" font-family="{MONO}" font-size="10" letter-spacing="2" fill="#8b949e" opacity="0.6">BY CODE VOLUME</text>')
     A('</g>')
-    bx, bw, bh, by = 56, 888, 14, ly + 14
-    A(f'<rect x="{bx-2}" y="{by-2}" width="{bw+4}" height="{bh+4}" rx="3" fill="#150b0c" stroke="#6d5a3a" stroke-width="1.5"/>')
+    bx, bw, bh, by = 56, 888, 15, ly + 14
+    A(f'<rect x="{bx-3}" y="{by-3}" width="{bw+6}" height="{bh+6}" rx="3" fill="#150b0c" stroke="#6d5a3a" stroke-width="1.5"/>')
     cx = bx
     for i, (name, pct) in enumerate(s["langs"]):
         wseg = max(3.0, bw * pct)
         color = LANG_COLORS[i % len(LANG_COLORS)]
-        A(f'<rect class="seg" style="animation-delay:{1.0 + i*0.15:.2f}s" x="{cx:.1f}" y="{by}" width="{wseg:.1f}" height="{bh}" fill="{color}"/>')
+        A(f'<rect class="seg" style="animation-delay:{1.2 + i*0.15:.2f}s" x="{cx:.1f}" y="{by}" width="{wseg:.1f}" height="{bh}" fill="{color}"/>')
         cx += wseg
+    A(f'<rect x="{bx}" y="{by}" width="{bw}" height="4" fill="#ffffff" opacity="0.08"/>')
+    A(f'<rect x="{bx-8}" y="{by+bh/2-4}" width="8" height="8" fill="none" stroke="#a08858" stroke-width="1.6" transform="rotate(45 {bx-4} {by+bh/2})"/>')
+    A(f'<rect x="{bx+bw}" y="{by+bh/2-4}" width="8" height="8" fill="none" stroke="#a08858" stroke-width="1.6" transform="rotate(45 {bx+bw+4} {by+bh/2})"/>')
     lx = 56
-    lyy = by + 42
+    lyy = by + 44
     for i, (name, pct) in enumerate(s["langs"]):
         color = LANG_COLORS[i % len(LANG_COLORS)]
         label = f"{name}&#160;{pct*100:.1f}%"
-        A(f'<g class="fade" style="animation-delay:{1.3 + i*0.12:.2f}s">')
+        A(f'<g class="fade" style="animation-delay:{1.5 + i*0.12:.2f}s">')
         A(f'<rect x="{lx}" y="{lyy-9}" width="9" height="9" fill="{color}"/>')
         A(f'<text x="{lx+16}" y="{lyy}" font-family="{SANS}" font-size="12.5" fill="#c9d1d9">{label}</text>')
         A('</g>')
         lx += 26 + 8 * (len(name) + 6)
 
-    # total contributions strip
-    ty = 384
-    A(f'<line x1="56" y1="{ty-24}" x2="944" y2="{ty-24}" stroke="#21262d" stroke-width="1"/>')
-    A(f'<g class="fade" style="animation-delay:1.6s">')
-    A(f'<text x="500" y="{ty+6}" text-anchor="middle" font-family="{MONO}" font-size="12" letter-spacing="3" fill="#a08858">総貢献&#160;&#160;TOTAL CONTRIBUTIONS&#160;&#160;<tspan font-family="{SANS}" font-size="26" font-weight="800" fill="#e0a458">&#160;{fmt(s["total_contrib"])}&#160;</tspan>&#160;&#160;SINCE {s["since"]}</text>')
+    A(f'<circle class="db" cx="62" cy="{H-22}" r="4" fill="#ff4653"/>')
+    A(f'<text class="fade" style="animation-delay:1.9s" x="944" y="{H-18}" text-anchor="end" font-family="{MONO}" font-size="10" letter-spacing="2" fill="#a08858" opacity="0.5">LAST SYNC · {s["sync"]}</text>')
     A('</g>')
-
-    A(f'<circle class="db" cx="62" cy="{H-20}" r="4" fill="#ff4653"/>')
-    A(f'<text class="fade" style="animation-delay:1.8s" x="944" y="{H-16}" text-anchor="end" font-family="{MONO}" font-size="10" letter-spacing="2" fill="#a08858" opacity="0.45">LAST SYNC · {s["sync"]}</text>')
+    A(f'<rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="14" stroke="#21262d"/>')
     A('</svg>')
     return "\n".join(p)
 
