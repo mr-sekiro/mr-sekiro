@@ -1,4 +1,4 @@
-name: Generate contribution snake
+name: Generate profile assets
 
 on:
   schedule:
@@ -16,6 +16,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: Generate snake animations
         uses: Platane/snk/svg-only@v3
         with:
@@ -23,6 +26,11 @@ jobs:
           outputs: |
             dist/github-snake.svg?palette=github-light&color_snake=#e63946
             dist/github-snake-dark.svg?palette=github-dark&color_snake=#e63946&color_dots=#161b22,#3d1418,#7a1f28,#b32633,#e63946
+
+      - name: Generate statistics panel
+        env:
+          GITHUB_TOKEN: ${{ secrets.PROFILE_TOKEN || secrets.GITHUB_TOKEN }}
+        run: python3 scripts/gen_stats.py mr-sekiro dist/stats.svg
 
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v4

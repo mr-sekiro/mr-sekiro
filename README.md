@@ -51,17 +51,7 @@
 <br/>
 
 <div align="center">
-  <a href="#--"><img src="https://github-readme-stats-snowy-two-18.vercel.app/api?username=mr-sekiro&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=0d1117&title_color=e63946&icon_color=e0a458&text_color=c9d1d9&ring_color=e63946" height="165" alt="GitHub stats"/></a>
-  &nbsp;
-  <a href="#--"><img src="https://streak-stats.demolab.com?user=mr-sekiro&hide_border=true&background=0d1117&ring=e63946&fire=e0a458&currStreakLabel=e63946&sideLabels=c9d1d9&currStreakNum=ffffff&sideNums=e0a458&dates=8b949e" height="165" alt="Streak stats"/></a>
-</div>
-
-<br/>
-
-<div align="center">
-  <a href="#--"><img src="https://github-readme-stats-snowy-two-18.vercel.app/api/top-langs/?username=mr-sekiro&layout=pie&count_private=true&hide_border=true&bg_color=0d1117&title_color=e63946&text_color=c9d1d9&langs_count=8" height="200" alt="Top languages (pie)"/></a>
-  &nbsp;
-  <a href="#--"><img src="https://github-readme-stats-snowy-two-18.vercel.app/api/top-langs/?username=mr-sekiro&layout=compact&count_private=true&hide_border=true&bg_color=0d1117&title_color=e63946&text_color=c9d1d9&langs_count=8" height="200" alt="Top languages (compact)"/></a>
+  <a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/output/stats.svg" alt="GitHub statistics" width="100%"/></a>
 </div>
 
 <br/>
