@@ -19,7 +19,7 @@
 <br/>
 
 <div align="center">
-  <a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/about.svg?v=5" alt="Character profile of Abdullah Hussein" width="100%"/></a>
+  <a href="#--"><img src="https://raw.githubusercontent.com/mr-sekiro/mr-sekiro/main/assets/about.svg?v=6" alt="Character profile of Abdullah Hussein" width="100%"/></a>
 </div>
 
 <br/>

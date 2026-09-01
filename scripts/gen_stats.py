@@ -162,7 +162,7 @@ def fmt(n):
 
 
 def render(s):
-    W, H = 1000, 470
+    W, H = 1000, 505
     p = []
     A = p.append
     A(f'<svg width="{W}" height="{H}" viewBox="0 0 {W} {H}" fill="none" xmlns="http://www.w3.org/2000/svg">')
@@ -189,10 +189,12 @@ def render(s):
     <clipPath id="stFrame"><rect width="{W}" height="{H}" rx="14"/></clipPath>
   </defs>""")
     A("""<style>
-    .cord { stroke-dasharray: 1100; stroke-dashoffset: 1100; animation: cordDraw 1.6s cubic-bezier(0.4,0,0.2,1) 0.2s forwards; }
-    @keyframes cordDraw { to { stroke-dashoffset: 0; } }
-    .bead { transform-box: fill-box; transform-origin: center; transform: scale(0); animation: bIn 0.55s cubic-bezier(0.34,1.56,0.64,1) forwards; }
-    @keyframes bIn { to { transform: scale(1); } }
+    .rod { transform-box: fill-box; transform-origin: center; transform: scaleX(0); animation: rodIn 0.9s cubic-bezier(0.22,1,0.36,1) 0.15s forwards; }
+    @keyframes rodIn { to { transform: scaleX(1); } }
+    .bn { transform-box: fill-box; transform-origin: center top; transform: scaleY(0); animation: unfurl 0.75s cubic-bezier(0.34,1.3,0.64,1) forwards; }
+    @keyframes unfurl { to { transform: scaleY(1); } }
+    .sway { transform-box: fill-box; transform-origin: center top; animation: bsway ease-in-out infinite alternate; }
+    @keyframes bsway { from { transform: rotate(-1.1deg); } to { transform: rotate(1.1deg); } }
     .fade { opacity: 0; animation: fIn 0.8s ease-out forwards; }
     @keyframes fIn { to { opacity: 1; } }
     .seg { transform-box: fill-box; transform-origin: left center; transform: scaleX(0); animation: sIn 1s cubic-bezier(0.22,1,0.36,1) forwards; }
@@ -218,16 +220,16 @@ def render(s):
   </style>""")
     A('<g clip-path="url(#stFrame)">')
     A(f'<rect width="{W}" height="{H}" fill="url(#stPanel)"/>')
-    A(f'<path d="M0 430 L140 400 L300 424 L500 396 L690 422 L850 402 L1000 420 L1000 {H} L0 {H} Z" fill="#0d1119"/>')
-    A('<g class="mist1" filter="url(#stMist)"><ellipse cx="280" cy="420" rx="220" ry="20" fill="#8b949e" opacity="0.05"/></g>')
-    A('<g class="mist2" filter="url(#stMist)"><ellipse cx="720" cy="440" rx="240" ry="22" fill="#8b949e" opacity="0.04"/></g>')
+    A(f'<path d="M0 465 L140 435 L300 459 L500 431 L690 457 L850 437 L1000 455 L1000 {H} L0 {H} Z" fill="#0d1119"/>')
+    A('<g class="mist1" filter="url(#stMist)"><ellipse cx="280" cy="455" rx="220" ry="20" fill="#8b949e" opacity="0.05"/></g>')
+    A('<g class="mist2" filter="url(#stMist)"><ellipse cx="720" cy="475" rx="240" ry="22" fill="#8b949e" opacity="0.04"/></g>')
     A(f'<text x="{W-14}" y="120" text-anchor="end" font-family="{SERIF_J}" font-size="140" font-weight="700" fill="#e63946" opacity="0.035">数</text>')
 
-    for cls, x, y, col in [("em1", 150, 452, "#e63946"), ("em2", 420, 458, "#e0a458"),
-                           ("em3", 640, 455, "#e63946"), ("em4", 880, 452, "#e0a458")]:
+    for cls, x, y, col in [("em1", 150, 487, "#e63946"), ("em2", 420, 493, "#e0a458"),
+                           ("em3", 640, 490, "#e63946"), ("em4", 880, 487, "#e0a458")]:
         A(f'<g transform="translate({x},{y})"><circle class="ember {cls}" r="1.7" fill="{col}"/></g>')
 
-    beads = [
+    banners = [
         (fmt(s["commits"]), "COMMITS"),
         (fmt(s["stars"]), "STARS"),
         (fmt(s["prs"]), "PULL REQUESTS"),
@@ -236,29 +238,27 @@ def render(s):
         (fmt(s["contributed"]), "CONTRIBUTED TO"),
     ]
     xs = [110, 266, 422, 578, 734, 890]
-    dy = [0, 16, 25, 25, 16, 0]
-    ys = [72 + d for d in dy]
-    cord = f"M20 52 C 60 56, 85 {ys[0]-4} {xs[0]} {ys[0]}"
-    for i in range(1, 6):
-        mx = (xs[i-1] + xs[i]) / 2
-        my = max(ys[i-1], ys[i]) + 12
-        cord += f" Q {mx} {my} {xs[i]} {ys[i]}"
-    cord += f" C 915 {ys[5]-4}, 940 56, 980 52"
-    A(f'<path class="cord" d="{cord}" stroke="#6d5a3a" stroke-width="2" fill="none" opacity="0.8"/>')
-    for i, ((val, label), x, y) in enumerate(zip(beads, xs, ys)):
-        d = 0.35 + i * 0.13
-        A(f'<g class="bead" style="animation-delay:{d:.2f}s">')
-        A(f'<circle cx="{x}" cy="{y}" r="36" fill="url(#beadGrad)" stroke="#6d5a3a" stroke-width="2.5"/>')
-        A(f'<circle cx="{x}" cy="{y}" r="29" fill="none" stroke="#a08858" stroke-width="1" opacity="0.4"/>')
-        A(f'<rect x="{x-4}" y="{y-42}" width="8" height="8" fill="#10141c" stroke="#a08858" stroke-width="1.6" transform="rotate(45 {x} {y-38})"/>')
-        fs = 19 if len(val) < 5 else 16.5
-        A(f'<text x="{x}" y="{y+7}" text-anchor="middle" font-family="{SANS}" font-size="{fs}" font-weight="800" fill="#f1f5f9">{val}</text>')
-        A('</g>')
-        A(f'<g class="fade" style="animation-delay:{d+0.15:.2f}s">')
-        A(f'<text x="{x}" y="{y+62}" text-anchor="middle" font-family="{MONO}" font-size="10" letter-spacing="2.5" fill="#a08858">{label}</text>')
-        A('</g>')
+    rod_y = 40
+    for i, x in enumerate(xs):
+        A(f'<rect x="{x-30}" y="{rod_y-6}" width="9" height="14" rx="2" fill="#2a2117"/>')
+        A(f'<rect x="{x+21}" y="{rod_y-6}" width="9" height="14" rx="2" fill="#2a2117"/>')
+    A(f'<rect class="rod" x="36" y="{rod_y-2}" width="928" height="4" rx="2" fill="#6d5a3a"/>')
+    A(f'<rect x="26" y="{rod_y-5}" width="10" height="10" fill="#161b22" stroke="#a08858" stroke-width="1.6" transform="rotate(45 31 {rod_y})"/>')
+    A(f'<rect x="964" y="{rod_y-5}" width="10" height="10" fill="#161b22" stroke="#a08858" stroke-width="1.6" transform="rotate(45 969 {rod_y})"/>')
+    for i, ((val, label), x) in enumerate(zip(banners, xs)):
+        d = 0.5 + i * 0.13
+        sway_dur = 4.6 + (i % 3) * 0.9
+        A(f'<g class="bn" style="animation-delay:{d:.2f}s"><g class="sway" style="animation-duration:{sway_dur:.1f}s; animation-delay:{1.4 + i*0.2:.1f}s">')
+        A(f'<path d="M{x-46} {rod_y+4} H {x+46} V 192 L {x} 212 L {x-46} 192 Z" fill="#12151d" stroke="#6d5a3a" stroke-width="1.5"/>')
+        A(f'<rect x="{x-46}" y="{rod_y+4}" width="92" height="27" fill="#b3242c"/>')
+        A(f'<rect x="{x-4.5}" y="{rod_y+13}" width="9" height="9" fill="none" stroke="#ffd9a0" stroke-width="1.6" transform="rotate(45 {x} {rod_y+17.5})"/>')
+        A(f'<path d="M{x-40} {rod_y+37} H {x+40} V 187 L {x} 204 L {x-40} 187 Z" fill="none" stroke="#a08858" stroke-width="0.8" opacity="0.3"/>')
+        fs = 23 if len(val) < 5 else 19.5
+        A(f'<text x="{x}" y="126" text-anchor="middle" font-family="{SANS}" font-size="{fs}" font-weight="800" fill="#f1f5f9">{val}</text>')
+        A(f'<text x="{x}" y="168" text-anchor="middle" font-family="{MONO}" font-size="9" letter-spacing="1" fill="#a08858">{label}</text>')
+        A('</g></g>')
 
-    fy = 250
+    fy = 288
     A(f'<rect x="499" y="{fy-46}" width="1.5" height="108" fill="url(#vRule)"/>')
 
     fx = 218
@@ -284,7 +284,7 @@ def render(s):
     A(f'<text x="{cx0+46}" y="{fy+28}" font-family="{MONO}" font-size="11.5" letter-spacing="2" fill="#8b949e">SINCE {s["since"]}&#160;&#160;·&#160;&#160;総貢献</text>')
     A('</g>')
 
-    ly = 352
+    ly = 400
     A('<g class="fade" style="animation-delay:1.1s">')
     A(f'<text x="56" y="{ly}" font-family="{MONO}" font-size="12" letter-spacing="3" fill="#a08858">TOP LANGUAGES&#160;&#160;<tspan font-family="{SERIF_J}" fill="#e63946" opacity="0.8">言語</tspan></text>')
     A(f'<text x="944" y="{ly}" text-anchor="end" font-family="{MONO}" font-size="10" letter-spacing="2" fill="#8b949e" opacity="0.6">BY CODE VOLUME</text>')
