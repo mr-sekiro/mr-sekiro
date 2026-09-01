@@ -1,103 +1,145 @@
-<svg width="1000" height="310" viewBox="0 0 1000 310" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="1000" height="345" viewBox="0 0 1000 345" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="abPanel" x1="0" y1="0" x2="1000" y2="310" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#0d1117"/>
-      <stop offset="0.5" stop-color="#11161f"/>
-      <stop offset="1" stop-color="#0d1117"/>
+    <linearGradient id="abSky" x1="0" y1="0" x2="0" y2="345" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0b0e14"/>
+      <stop offset="0.62" stop-color="#0e1219"/>
+      <stop offset="0.85" stop-color="#141019"/>
+      <stop offset="1" stop-color="#0b0e14"/>
     </linearGradient>
-    <linearGradient id="abTrail" x1="60" y1="0" x2="940" y2="0" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#e63946"/>
-      <stop offset="1" stop-color="#e0a458"/>
+    <linearGradient id="abRoad" x1="120" y1="0" x2="950" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6d5a3a" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#e0a458" stop-opacity="0.8"/>
     </linearGradient>
-    <radialGradient id="abNodeGlow" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#e63946" stop-opacity="0.45"/>
+    <radialGradient id="abGateGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#e63946" stop-opacity="0.3"/>
       <stop offset="1" stop-color="#e63946" stop-opacity="0"/>
     </radialGradient>
-    <pattern id="abDots" width="26" height="26" patternUnits="userSpaceOnUse">
-      <circle cx="1.5" cy="1.5" r="1.5" fill="#8b949e" fill-opacity="0.06"/>
-    </pattern>
-    <clipPath id="abFrame"><rect width="1000" height="310" rx="14"/></clipPath>
+    <filter id="abMist" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="13"/></filter>
+    <clipPath id="abFrame"><rect width="1000" height="345" rx="14"/></clipPath>
   </defs>
 
   <style>
     .prose { animation: pIn 1.1s cubic-bezier(0.22,1,0.36,1) both; }
     .pr2 { animation-delay: 0.25s; }
     @keyframes pIn { from { transform: translateY(10px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-    .trail {
-      stroke-dasharray: 1000;
-      stroke-dashoffset: 1000;
-      animation: trailDraw 2.4s cubic-bezier(0.4,0,0.2,1) 0.5s forwards;
-    }
-    @keyframes trailDraw { to { stroke-dashoffset: 0; } }
-    .mk { transform-box: fill-box; transform-origin: center; transform: scale(0); animation: mkPop 0.55s cubic-bezier(0.34,1.56,0.64,1) forwards; }
-    @keyframes mkPop { to { transform: scale(1); } }
-    .mlbl { opacity: 0; animation: mFade 0.7s ease-out forwards; }
-    @keyframes mFade { to { opacity: 1; } }
-    .m1 { animation-delay: 0.9s; }
-    .m2 { animation-delay: 1.4s; }
-    .m3 { animation-delay: 1.9s; }
-    .m4 { animation-delay: 2.4s; }
-    .glowP { transform-box: fill-box; transform-origin: center; animation: gPulse 3s ease-in-out 3s infinite both; opacity: 0; }
-    @keyframes gPulse { 0%,100% { opacity: 0.5; transform: scale(1); } 50% { opacity: 1; transform: scale(1.25); } }
-    .wolfrun { animation: mFade 0.7s ease-out 2.8s forwards; opacity: 0; }
+    .road { stroke-dasharray: 1000; stroke-dashoffset: 1000; animation: roadDraw 1.6s cubic-bezier(0.4,0,0.2,1) 0.4s forwards; }
+    @keyframes roadDraw { to { stroke-dashoffset: 0; } }
+    .gate { transform-box: fill-box; transform-origin: center bottom; transform: scaleY(0); animation: gateUp 0.8s cubic-bezier(0.34,1.4,0.64,1) forwards; }
+    .ga1 { animation-delay: 0.7s; } .ga2 { animation-delay: 1.05s; } .ga3 { animation-delay: 1.4s; } .ga4 { animation-delay: 1.75s; }
+    @keyframes gateUp { to { transform: scaleY(1); } }
+    .glab { opacity: 0; animation: gFade 0.8s ease-out forwards; }
+    .gl1 { animation-delay: 1.0s; } .gl2 { animation-delay: 1.35s; } .gl3 { animation-delay: 1.7s; } .gl4 { animation-delay: 2.05s; }
+    @keyframes gFade { to { opacity: 1; } }
+    .glow4 { transform-box: fill-box; transform-origin: center; animation: g4p 3.4s ease-in-out 2.4s infinite both; opacity: 0; }
+    @keyframes g4p { 0%,100% { opacity: 0.55; transform: scale(1); } 50% { opacity: 1; transform: scale(1.18); } }
+    .mist1 { animation: drift 26s ease-in-out infinite alternate; }
+    .mist2 { animation: drift 34s ease-in-out infinite alternate-reverse; }
+    @keyframes drift { from { transform: translateX(-40px); } to { transform: translateX(55px); } }
+    .dot { animation: twinkle 3.8s ease-in-out infinite; }
+    @keyframes twinkle { 0%,100% { opacity: 0.1; } 50% { opacity: 0.7; } }
+    .fall { animation: fall linear infinite; }
+    .sway { animation: sway ease-in-out infinite alternate; }
+    @keyframes fall { from { transform: translateY(-30px); } to { transform: translateY(380px); } }
+    @keyframes sway { from { transform: translateX(-16px); } to { transform: translateX(16px); } }
+    .pt1 .fall { animation-duration: 12s; animation-delay: -3s; } .pt1 .sway { animation-duration: 3.6s; }
+    .pt2 .fall { animation-duration: 15s; animation-delay: -9s; } .pt2 .sway { animation-duration: 4.2s; }
+    .walk { opacity: 0; animation: gFade 0.9s ease-out 2.5s forwards; }
   </style>
 
   <g clip-path="url(#abFrame)">
-    <rect width="1000" height="310" fill="url(#abPanel)"/>
-    <text x="14" y="290" font-family="'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif" font-size="170" font-weight="700" fill="#e63946" opacity="0.03">我</text>
+    <rect width="1000" height="345" fill="url(#abSky)"/>
+    <text x="16" y="330" font-family="'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif" font-size="160" font-weight="700" fill="#e63946" opacity="0.03">我</text>
+
+    <circle class="dot" cx="120" cy="130" r="1.3" fill="#f1f5f9" style="animation-delay:0s"/>
+    <circle class="dot" cx="335" cy="115" r="1.1" fill="#e0a458" style="animation-delay:1.4s"/>
+    <circle class="dot" cx="545" cy="128" r="1.2" fill="#f1f5f9" style="animation-delay:2.6s"/>
+    <circle class="dot" cx="52" cy="210" r="1.1" fill="#e63946" style="animation-delay:2s"/>
+    <circle class="dot" cx="960" cy="120" r="1.2" fill="#e0a458" style="animation-delay:0.8s"/>
 
     <g class="prose">
-      <text x="500" y="58" text-anchor="middle" font-family="'Palatino Linotype', 'Book Antiqua', Georgia, serif" font-size="18" font-style="italic" fill="#e8edf3">I build products end to end&#160;·&#160;from the <tspan fill="#e63946">SQL schema</tspan> to the last <tspan fill="#e0a458">React pixel</tspan>.</text>
+      <text x="500" y="56" text-anchor="middle" font-family="'Palatino Linotype', 'Book Antiqua', Georgia, serif" font-size="18" font-style="italic" fill="#e8edf3">I build products end to end&#160;·&#160;from the <tspan fill="#e63946">SQL schema</tspan> to the last <tspan fill="#e0a458">React pixel</tspan>.</text>
     </g>
     <g class="prose pr2">
-      <text x="500" y="86" text-anchor="middle" font-family="'Palatino Linotype', 'Book Antiqua', Georgia, serif" font-size="15" font-style="italic" fill="#8b949e">Backend architecture is my blade. The frontend is its second edge.</text>
+      <text x="500" y="84" text-anchor="middle" font-family="'Palatino Linotype', 'Book Antiqua', Georgia, serif" font-size="14.5" font-style="italic" fill="#8b949e">Backend architecture is my blade. The frontend is its second edge.</text>
     </g>
 
-    <path class="trail" d="M60 218 C 80 212, 95 208, 110 205 C 200 195, 290 178, 380 185 C 470 192, 560 215, 650 210 C 730 206, 820 188, 890 180" stroke="url(#abTrail)" stroke-width="2.5" stroke-linecap="round" pathLength="1000"/>
-    <circle cx="60" cy="218" r="4" fill="#e63946"/>
+    <path class="road" d="M110 243 C 300 252, 520 268, 700 288 S 930 322, 965 330" stroke="url(#abRoad)" stroke-width="2.5" stroke-linecap="round" pathLength="1000"/>
+    <path class="road" d="M120 238 C 310 246, 530 261, 712 280 S 940 313, 978 320" stroke="url(#abRoad)" stroke-width="1" stroke-linecap="round" opacity="0.35" pathLength="1000"/>
 
-    <g class="mk m1">
-      <rect x="103" y="198" width="14" height="14" fill="#161b22" stroke="#e0a458" stroke-width="2" transform="rotate(45 110 205)"/>
-    </g>
-    <g class="mlbl m1">
-      <text x="110" y="186" text-anchor="middle" font-family="'Cascadia Code', Consolas, 'Courier New', monospace" font-size="13" fill="#e0a458">2023</text>
-      <text x="110" y="235" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="700" letter-spacing="2" fill="#f1f5f9">FOUNDATIONS</text>
-      <text x="110" y="254" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" fill="#8b949e">C# · OOP · problem solving</text>
-    </g>
+    <g class="mist1" filter="url(#abMist)"><ellipse cx="300" cy="250" rx="190" ry="16" fill="#8b949e" opacity="0.05"/></g>
+    <g class="mist2" filter="url(#abMist)"><ellipse cx="700" cy="290" rx="220" ry="18" fill="#8b949e" opacity="0.045"/></g>
 
-    <g class="mk m2">
-      <rect x="373" y="178" width="14" height="14" fill="#161b22" stroke="#e0a458" stroke-width="2" transform="rotate(45 380 185)"/>
+    <!-- gate 1 · 2023 · h=52 base=240 cx=175 -->
+    <g class="gate ga1">
+      <path d="M146 197 Q175 191 204 197 L204 202 Q175 196 146 202 Z" fill="#4a1d21"/>
+      <rect x="150" y="204" width="50" height="3" fill="#5f2429"/>
+      <rect x="156" y="207" width="4" height="33" fill="#5f2429"/>
+      <rect x="190" y="207" width="4" height="33" fill="#5f2429"/>
+      <rect x="152" y="217" width="46" height="3.5" fill="#5f2429"/>
+      <rect x="173" y="207" width="4" height="10" fill="#5f2429"/>
     </g>
-    <g class="mlbl m2">
-      <text x="380" y="166" text-anchor="middle" font-family="'Cascadia Code', Consolas, 'Courier New', monospace" font-size="13" fill="#e0a458">2024</text>
-      <text x="380" y="215" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="700" letter-spacing="2" fill="#f1f5f9">THE FORGE</text>
-      <text x="380" y="234" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" fill="#8b949e">WPF · WinForms · SQL Server</text>
-    </g>
-
-    <g class="mk m3">
-      <rect x="643" y="203" width="14" height="14" fill="#161b22" stroke="#e0a458" stroke-width="2" transform="rotate(45 650 210)"/>
-    </g>
-    <g class="mlbl m3">
-      <text x="650" y="191" text-anchor="middle" font-family="'Cascadia Code', Consolas, 'Courier New', monospace" font-size="13" fill="#e0a458">2025</text>
-      <text x="650" y="240" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="700" letter-spacing="2" fill="#f1f5f9">BACKEND ASCENT</text>
-      <text x="650" y="259" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" fill="#8b949e">ASP.NET Core · EF Core · Node.js</text>
+    <g class="glab gl1">
+      <text x="175" y="257" text-anchor="middle" font-family="'Cascadia Code', Consolas, 'Courier New', monospace" font-size="10" fill="#a08858">2023</text>
+      <text x="175" y="272" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.5" fill="#8b949e">FOUNDATIONS</text>
+      <text x="175" y="286" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="9" fill="#5c6570">C# · OOP · problem solving</text>
     </g>
 
-    <circle class="glowP" cx="890" cy="180" r="22" fill="url(#abNodeGlow)"/>
-    <g class="mk m4">
-      <rect x="881" y="171" width="18" height="18" fill="#e63946" stroke="#e0a458" stroke-width="2.5" transform="rotate(45 890 180)"/>
+    <!-- gate 2 · 2024 · h=76 base=252 cx=400 -->
+    <g class="gate ga2">
+      <path d="M359 189 Q400 181 441 189 L441 196 Q400 188 359 196 Z" fill="#611f26"/>
+      <rect x="364" y="198" width="72" height="4" fill="#7e2830"/>
+      <rect x="373" y="202" width="5.5" height="50" fill="#7e2830"/>
+      <rect x="421" y="202" width="5.5" height="50" fill="#7e2830"/>
+      <rect x="367" y="217" width="66" height="4.5" fill="#7e2830"/>
+      <rect x="397" y="202" width="5.5" height="15" fill="#7e2830"/>
     </g>
-    <g class="mlbl m4">
-      <text x="890" y="156" text-anchor="middle" font-family="'Cascadia Code', Consolas, 'Courier New', monospace" font-size="13" fill="#e0a458">2026</text>
-      <text x="890" y="214" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="700" letter-spacing="2" fill="#f1f5f9">FULL-STACK</text>
-      <text x="890" y="233" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" fill="#8b949e">React 19 · Next.js 16 · 3 products live</text>
+    <g class="glab gl2">
+      <text x="400" y="270" text-anchor="middle" font-family="'Cascadia Code', Consolas, 'Courier New', monospace" font-size="11" fill="#c99b52">2024</text>
+      <text x="400" y="286" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.5" fill="#c9d1d9">THE FORGE</text>
+      <text x="400" y="301" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#8b949e">WPF · WinForms · SQL Server</text>
     </g>
 
-    <g class="wolfrun">
-      <text x="60" y="290" font-family="'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif" font-size="15" fill="#e0a458" opacity="0.9">狼</text>
-      <text x="82" y="290" font-family="'Cascadia Code', Consolas, 'Courier New', monospace" font-size="12" letter-spacing="1" fill="#8b949e">the path continues...</text>
+    <!-- gate 3 · 2025 · h=108 base=272 cx=625 -->
+    <g class="gate ga3">
+      <path d="M567 180 Q625 169 683 180 L683 189 Q625 178 567 189 Z" fill="#801f28"/>
+      <rect x="574" y="192" width="102" height="5.5" fill="#a72833"/>
+      <rect x="587" y="198" width="7.5" height="74" fill="#a72833"/>
+      <rect x="655" y="198" width="7.5" height="74" fill="#a72833"/>
+      <rect x="579" y="219" width="92" height="6" fill="#a72833"/>
+      <rect x="621" y="198" width="7.5" height="21" fill="#a72833"/>
     </g>
+    <g class="glab gl3">
+      <text x="625" y="292" text-anchor="middle" font-family="'Cascadia Code', Consolas, 'Courier New', monospace" font-size="12" fill="#e0a458">2025</text>
+      <text x="625" y="309" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="700" letter-spacing="2" fill="#e8edf3">BACKEND ASCENT</text>
+      <text x="625" y="325" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" fill="#8b949e">ASP.NET Core · EF Core · Node.js</text>
+    </g>
+
+    <!-- gate 4 · 2026 · h=160 base=300 cx=872 glowing -->
+    <circle class="glow4" cx="872" cy="215" r="105" fill="url(#abGateGlow)"/>
+    <g class="gate ga4">
+      <path d="M788 155 Q872 140 956 155 L956 167 Q872 152 788 167 Z" fill="#b3242c"/>
+      <rect x="798" y="171" width="148" height="8" fill="#e63946"/>
+      <rect x="816" y="180" width="11" height="120" fill="#e63946"/>
+      <rect x="917" y="180" width="11" height="120" fill="#e63946"/>
+      <rect x="805" y="212" width="134" height="8.5" fill="#e63946"/>
+      <rect x="866" y="180" width="11" height="32" fill="#e63946"/>
+      <rect x="812" y="296" width="19" height="6" fill="#42151a"/>
+      <rect x="913" y="296" width="19" height="6" fill="#42151a"/>
+    </g>
+    <g class="glab gl4">
+      <text x="872" y="200" text-anchor="middle" font-family="'Cascadia Code', Consolas, 'Courier New', monospace" font-size="13" font-weight="700" fill="#ffd9a0">2026</text>
+      <text x="872" y="248" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="800" letter-spacing="3" fill="#ffffff">FULL-STACK</text>
+      <text x="872" y="268" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" fill="#e8dcc2">React 19 · Next.js 16 · 3 products live</text>
+    </g>
+
+    <g class="walk">
+      <text x="86" y="238" text-anchor="middle" font-family="'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif" font-size="17" font-weight="700" fill="#e0a458">狼</text>
+      <text x="60" y="318" font-family="'Cascadia Code', Consolas, 'Courier New', monospace" font-size="11" letter-spacing="1" fill="#8b949e">the path continues...</text>
+    </g>
+
+    <g transform="translate(260,0)"><g class="pt1"><g class="fall"><g class="sway"><path d="M0 -5 C3.5 -2.5 3.5 2.5 0 5 C-3.5 2.5 -3.5 -2.5 0 -5" fill="#c97f8a" opacity="0.5"/></g></g></g></g>
+    <g transform="translate(760,0)"><g class="pt2"><g class="fall"><g class="sway"><path d="M0 -4.5 C3 -2 3 2 0 4.5 C-3 2 -3 -2 0 -4.5" fill="#dd8f99" opacity="0.45"/></g></g></g></g>
   </g>
 
-  <rect x="0.5" y="0.5" width="999" height="309" rx="14" stroke="#21262d"/>
+  <rect x="0.5" y="0.5" width="999" height="344" rx="14" stroke="#21262d"/>
 </svg>
