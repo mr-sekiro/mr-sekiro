@@ -193,8 +193,8 @@ def render(s):
     @keyframes rodIn { to { transform: scaleX(1); } }
     .bn { transform-box: fill-box; transform-origin: center top; transform: scaleY(0); animation: unfurl 0.75s cubic-bezier(0.34,1.3,0.64,1) forwards; }
     @keyframes unfurl { to { transform: scaleY(1); } }
-    .sway { transform-box: fill-box; transform-origin: center top; animation: bsway ease-in-out infinite alternate; }
-    @keyframes bsway { from { transform: rotate(-1.1deg); } to { transform: rotate(1.1deg); } }
+    .bt { opacity: 0; animation: btIn 0.6s ease-out forwards; }
+    @keyframes btIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
     .fade { opacity: 0; animation: fIn 0.8s ease-out forwards; }
     @keyframes fIn { to { opacity: 1; } }
     .seg { transform-box: fill-box; transform-origin: left center; transform: scaleX(0); animation: sIn 1s cubic-bezier(0.22,1,0.36,1) forwards; }
@@ -247,16 +247,17 @@ def render(s):
     A(f'<rect x="964" y="{rod_y-5}" width="10" height="10" fill="#161b22" stroke="#a08858" stroke-width="1.6" transform="rotate(45 969 {rod_y})"/>')
     for i, ((val, label), x) in enumerate(zip(banners, xs)):
         d = 0.5 + i * 0.13
-        sway_dur = 4.6 + (i % 3) * 0.9
-        A(f'<g class="bn" style="animation-delay:{d:.2f}s"><g class="sway" style="animation-duration:{sway_dur:.1f}s; animation-delay:{1.4 + i*0.2:.1f}s">')
+        A(f'<g class="bn" style="animation-delay:{d:.2f}s">')
         A(f'<path d="M{x-46} {rod_y+4} H {x+46} V 192 L {x} 212 L {x-46} 192 Z" fill="#12151d" stroke="#6d5a3a" stroke-width="1.5"/>')
         A(f'<rect x="{x-46}" y="{rod_y+4}" width="92" height="27" fill="#b3242c"/>')
         A(f'<rect x="{x-4.5}" y="{rod_y+13}" width="9" height="9" fill="none" stroke="#ffd9a0" stroke-width="1.6" transform="rotate(45 {x} {rod_y+17.5})"/>')
         A(f'<path d="M{x-40} {rod_y+37} H {x+40} V 187 L {x} 204 L {x-40} 187 Z" fill="none" stroke="#a08858" stroke-width="0.8" opacity="0.3"/>')
+        A('</g>')
         fs = 23 if len(val) < 5 else 19.5
+        A(f'<g class="bt" style="animation-delay:{d + 0.55:.2f}s">')
         A(f'<text x="{x}" y="126" text-anchor="middle" font-family="{SANS}" font-size="{fs}" font-weight="800" fill="#f1f5f9">{val}</text>')
         A(f'<text x="{x}" y="168" text-anchor="middle" font-family="{MONO}" font-size="9" letter-spacing="1" fill="#a08858">{label}</text>')
-        A('</g></g>')
+        A('</g>')
 
     fy = 288
     A(f'<rect x="499" y="{fy-46}" width="1.5" height="108" fill="url(#vRule)"/>')
